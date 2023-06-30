@@ -112,8 +112,7 @@ body {
 }
 
 .author-profile img {
-  height: 120px;
-  width: 120px;
+  max-width: 100%;
   background-color: #f9fafc;
   padding: 5px;
 }

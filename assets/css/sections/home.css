@@ -27,7 +27,7 @@
 
 .home img {
   width: 222px;
-  height: 222px;
+  height: auto;
   background-color: #DCDFE6;
   padding: 5px;
   margin-bottom: 10px;
