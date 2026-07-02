@@ -1,1866 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Panos Tsilivis</title>
-    
-    
-    <meta name="description" content="Portfolio and personal website of Panos Tsilivis." />
-    
-    <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-
-
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-
-<meta name="referrer" content="strict-origin-when-cross-origin" />
-
-
-
-
-<link rel="canonical" href="https://panostsilivis.com/" />
-
-
-<link rel="stylesheet" href="/application.9a60485edfff4273182da5787b77d2e150d987ab1cde0ab0f120f673bd2937e9.css" integrity="sha256-mmBIXt//QnMYLaV4e3fS4VDZh6sc3gqw8SD2c70pN&#43;k=" />
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-  
-
-  <link rel="icon" type="image/png" href="/assets/images/favicon_hu_55e61efb55b7e43c.png" />
-
-
-<link rel="alternate" type="application/rss+xml" href="https://panostsilivis.com/index.xml" title="Panos Tsilivis">
-
-
-
-
-
-
-
-<meta property="og:title" content="Panos Tsilivis" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="" /><meta property="og:url" content="https://panostsilivis.com/">
-
-
-
-
-
-
-    <script integrity="sha256-DO4ugzEwhTW1Id1UIWn0gUJWaebCYOypeTit6LW4QB4=">
-     let theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light'
-if (theme === 'system') {
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark'
-  } else {
-    theme = 'light'
-  }
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panos Tsilivis — Software Technical Project Leader</title>
+<meta name="description" content="Panos Tsilivis — Software Technical Project Leader in Regensburg, DE. C++, AUTOSAR, Automotive SPICE, ADAS/AD motion planning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f7f5f0}
+:root{--bg:#f7f5f0;--bg-2:#efece4;--bg-3:#e6e1d5;--ink:#16140e;--muted:#6f6b61;--line:#dbd6ca;--accent:#ff5a36;--accent-ink:#ffffff;--blue:#2f6df0}
+:root[data-theme="dark"]{--bg:#0b0b0d;--bg-2:#131318;--bg-3:#1c1c22;--ink:#f2f0ea;--muted:#908d85;--line:#272730;--accent:#ff6a48;--accent-ink:#0b0b0d;--blue:#5b9dff}
+@keyframes pt-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pt-blink{0%,55%{opacity:1}80%,100%{opacity:.12}}
+@keyframes pt-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important}}
+a{color:inherit}
+:root{--ease-out:cubic-bezier(.23,1,.32,1)}
+.nav-link{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s ease}
+.btn-accent{transition:transform .16s var(--ease-out),box-shadow .2s ease}
+.btn-ghost{transition:transform .16s var(--ease-out),border-color .2s ease}
+.card-lift{transition:transform .25s var(--ease-out),border-color .25s ease,box-shadow .25s ease}
+.proj-card{transition:transform .25s var(--ease-out),border-color .25s ease,box-shadow .25s ease}
+.theme-btn{transition:transform .16s var(--ease-out),border-color .2s ease}
+.nav-mobile button{transition:transform .16s var(--ease-out),border-color .2s ease}
+/* press feedback — deliberately outside the hover query so touch gets it too */
+.btn-accent:active{transform:translateY(-1px) scale(.97)}
+.btn-ghost:active{transform:translateY(-1px) scale(.97)}
+.proj-card:active{transform:translateY(-3px) scale(.985)}
+.theme-btn:active{transform:scale(.95)}
+.nav-mobile button:active{transform:scale(.93)}
+/* hover only for real pointers — no sticky hover on touch/tablet */
+@media (hover:hover) and (pointer:fine){
+  .nav-link:hover{color:var(--ink)}
+  .btn-accent:hover{transform:translateY(-2px)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .card-lift:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .proj-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 40px -24px rgba(0,0,0,.45)}
+  .theme-btn:hover{border-color:var(--accent)}
 }
-document.documentElement.setAttribute('data-theme', theme)
-
-    </script>
-    
-  </head>
-  <body data-bs-spy="scroll" data-bs-target="#top-navbar" data-bs-offset="100">
-
-    
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-  
-  
-    
-  
-  
-
-
-
-  
-  
-    
-  
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<nav class="navbar navbar-expand-xl top-navbar shadow transparent-navbar homepage" id="top-navbar">
-  <div class="container">
-    
-    <a class="navbar-brand" href="/">
-      
-        <img src="/images/main-logo_hu_b7ffbb7e140a9051.png" id="logo" alt="Logo">
-      Panos Tsilivis</a>
-    <button
-      class="navbar-toggler navbar-dark"
-      id="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#top-nav-items"
-      aria-label="menu"
-    >
-      <i data-feather="menu"></i>
-    </button>
-
-    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
-      <ul class="nav navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        
-          
-          
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-              
-            
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="#skills">Skills</a>
-                </li>
-              
-            
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="#experiences">Experiences</a>
-                </li>
-              
-            
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects">Projects</a>
-                </li>
-              
-            
-            
-              
-              
-            
-            
-              
-              
-            
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                
-                
-                  
-                    
-                    
-                  
-                  
-                    
-                    
-                  
-                  
-                    
-                    
-                  
-                  
-                    
-                    
-                  
-                  
-                    
-                    
-                      <a class="dropdown-item" href="#recent-posts">Recent Posts</a>
-                    
-                  
-                  
-                    
-                    
-                      <a class="dropdown-item" href="#achievements">Achievements</a>
-                    
-                  
-              </div>
-            </li>
-          
-        
-        
-          <div id="top-navbar-divider"></div>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
-          </li>
-        
-        
-        
-            
-              <li class="nav-item">
-                <a class="nav-link" href="panostsilivis.com">Blog</a>
-              </li>
-            
-        
-        
-        
-      </ul>
-    </div>
-  </div>
-  
-  
-    <img src="/images/main-logo_hu_b7ffbb7e140a9051.png" class="d-none" id="main-logo" alt="Logo">
-  
-  
-    <img src="/images/main-logo_hu_b7ffbb7e140a9051.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
-  
-  
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-fluid home" id="home">
-  <style>
-     
-    #homePageBackgroundImageDivStyled {
-      background-image: url('/images/minimal_background_hu_3f8ae4ce68e801c7.jpg');
-    }
-
-     
-    @media (min-width: 500px) and (max-width: 800px) {
-
-       
-      #homePageBackgroundImageDivStyled {
-        background-image: url('/images/minimal_background_hu_481f7cfbe115388e.jpg');
-      }
-    }
-
-    @media (min-width: 801px) and (max-width: 1200px) {
-
-       
-      #homePageBackgroundImageDivStyled {
-        background-image: url('/images/minimal_background_hu_e249852de1b2b913.jpg');
-      }
-    }
-
-    @media (min-width: 1201px) and (max-width: 1500px) {
-
-       
-      #homePageBackgroundImageDivStyled {
-        background-image: url('/images/minimal_background_hu_e7c021b114e7bf5c.jpg');
-      }
-    }
-
-    @media (min-width: 1501px) {
-
-       
-      #homePageBackgroundImageDivStyled {
-        background-image: url('/images/minimal_background.jpg');
-      }
-    }
-
-    html[data-theme='dark'] {
-
-       
-      #homePageBackgroundImageDivStyled {
-        background-image: url('/images/minimal_background_hu_3f8ae4ce68e801c7.jpg');
-      }
-
-       
-      @media (min-width: 500px) and (max-width: 800px) {
-
-         
-        #homePageBackgroundImageDivStyled {
-          background-image: url('/images/minimal_background_hu_481f7cfbe115388e.jpg');
-        }
-      }
-
-      @media (min-width: 801px) and (max-width: 1200px) {
-
-         
-        #homePageBackgroundImageDivStyled {
-          background-image: url('/images/minimal_background_hu_e249852de1b2b913.jpg');
-        }
-      }
-
-      @media (min-width: 1201px) and (max-width: 1500px) {
-
-         
-        #homePageBackgroundImageDivStyled {
-          background-image: url('/images/minimal_background_hu_e7c021b114e7bf5c.jpg');
-        }
-      }
-
-      @media (min-width: 1501px) {
-
-         
-        #homePageBackgroundImageDivStyled {
-          background-image: url('/images/minimal_background.jpg');
-        }
-      }
-    }
-  </style>
-  <span class="on-the-fly-behavior"></span>
-  <div id="homePageBackgroundImageDivStyled" class="background container-fluid"></div>
-  <div class="container content text-center">
-    <img src="/images/profile_hu_e3139640b0215731.png" class="rounded-circle mx-auto d-block img-fluid" alt="Author Image" />
-    <h1 class="greeting"> Hi, I&#39;m Panos</h1>
-    
-    <div class="typing-carousel">
-      <span id="typed" class="typed"></span>
-      <span class="ityped-cursor"></span>
-    </div>
-    <ul id="typing-carousel-data">
-      
-      
-      <li>I&#39;m a Software Technical Lead</li>
-      
-      <li>I work with Series of Production Cars</li>
-      
-      <li>I&#39;m passionate about cars</li>
-      
-      
-    </ul>
-    
-    
-    
-    
-    
-    
-    <a href="#about" class="arrow-center" aria-label=" More - Panos"> <i
-        class="arrow bounce fa fa-chevron-down"></i></a>
-    
-    
-  </div>
-</div>
-    
-    
-
-    
-      
-      
-        
-          <div class="container-fluid section-holder d-flex bg-primary">
-            
-
-  
-
-
-
-
-
-<div class="container anchor p-lg-5 about-section" id="about">
-  <div class="row pt-sm-2 pt-md-4 align-self-center">
-    
-    
-     <div class="col-sm-6"> 
-      <h3 class="p-1">Panos Tsilivis</h3>
-      
-      <h5 class="p-1">
-        Software Technical Project Leader
-        
-      </h5>
-      
-      <p class="p-1 text-justify">
-        A BCU Software Product Owner and previous Autonomous Vehicles Development Engineer, with ultimate professional goal being oriented in the field of automotive engineering research and development. The innovative and progressive thinking is one of the leading personal characteristics along with strong organizational and communication abilities. An experienced C++, Python, Matlab &amp; Simulink and Robot Operating System (ROS), CMake developer, with applications directed to Motion Planning and Control Systems development. A fluent English and native Greek speaker, who is eager to take on performance demanding projects. A passionate autonomous systems developer who constantly seeks to combine ingenious ideas and creative research teams.
-      </p>
-      <div class="text-container ms-auto">
-        <ul class="social-link d-flex">
-          
-          <li>
-            
-              <a href="mailto:p.tsilivis10@gmail.com" title="Email" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            
-          </li>
-          
-          <li>
-            
-              <a href="https://www.linkedin.com/in/panos-tsilivis/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            
-          </li>
-          
-          <li>
-            
-              <a href="https://twitter.com/PanosTsilivis1" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-            
-          </li>
-          
-          <li>
-            
-              <a href="https://www.facebook.com/ptsilivis" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-            
-          </li>
-          
-          <li>
-            
-              <a href="https://github.com/ptsilivis" title="Github" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-            
-          </li>
-          
-        </ul>
-      </div>
-      
-      
-    </div>
-    
-    <div class="col-sm-6 pt-5 ps-md-4 ps-sm-3 pt-sm-0">
-      <div class="row">
-        
-        
-        
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress yellow">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-95"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Team Work</div>
-  </div>
-</div>
-
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress pink">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-95"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Communication</div>
-  </div>
-</div>
-
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress green">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-95"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Hard Working</div>
-  </div>
-</div>
-
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress blue">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-90"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Leadership</div>
-  </div>
-</div>
-
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress sky">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-90"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Fast Learner</div>
-  </div>
-</div>
-
-        
-          
-<div class="col-6 col-lg-4 p-2">
-  
-  
-  <div class="circular-progress orange">
-    <span class="circular-progress-left">
-      <span
-        class="circular-progress-bar circular-progress-percentage-90"
-        
-      ></span>
-    </span>
-    <span class="circular-progress-right">
-      <span
-      class="circular-progress-bar"
-      
-      ></span>
-    </span>
-    <div class="circular-progress-value">Problem Solving</div>
-  </div>
-</div>
-
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-        
-          <div class="container-fluid section-holder d-flex bg-secondary">
-            
-
-  
-
-
-<div class="container-fluid anchor pb-5 skills-section" id="skills">
-  
-    <h1 class="text-center">
-        <span id="skills"></span>Skills</h1>
-  
-  
-  <div class="container d-flex-block">
-    <div class="row" id="primary-skills">
-  
-      
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="http://www.cplusplus.com/" title="C&#43;&#43;" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/c&#43;&#43;.png"> C&#43;&#43;</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Expert C++ developer with applied experience in customer and R&amp;D projects, focused in motion planning algorithm development. Code compliance with Adaptive AUTOSAR C++14.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.python.org/" title="Python" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/python.png"> Python</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Using as secondary language for professional development. Capable of writing scalable, testable, and maintainable program. Both Bachelor and Master thesis were written in Python.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.mathworks.com/products/matlab.html" title="MATLAB &amp; Simulink" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/matlab.png"> MATLAB &amp; Simulink</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Used as main language for the start of my career and during the academic years, until I changed entirely to C++ development of motion planning algorithms.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.ros.org/" title="ROS" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/ros.png"> ROS</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Working with ROS since 2nd year of B.Sc studies. Extensive professional and academic experience. Favourite framework for functional integration.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/docker.svg"> Docker</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Use of Docker as a tool to provide common developing environment among all developers of current company&rsquo;s team. Developed the corresponding images.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" >
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/linux.png"> Linux &amp; WSL</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Using WSL as development OS; used Linux during my academic years. Capable of writing bash/shell scripts.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.ptc.com/en" title="PTC Integrity &amp; Git" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/git.png"> PTC Integrity &amp; Git</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Experienced with version-control development. Mostly, use PTC Integrity. Also, have experience in working with Azure DevOps.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.jenkins.io" title="Jenkins CI/CT" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/jenkins.png"> Jenkins CI/CT</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Experience in Continuous Testing-driven development, with knowledge in Jenkins configuration script development.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.mscsoftware.com/de/virtual-test-drive" title="Vires VTD" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/vtd.png"> Vires VTD</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Professional experience in functional testing with the use of VTD as simulation tool.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.unrealengine.com/en-US/" title="Unreal Engine 4" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/ue4.png"> Unreal Engine 4</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Professional experience in R&amp;D project for simulation of ADAS applications and Sensor Testing.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://opencv.org" title="Kubernetes" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/k8s.png"> Kubernetes</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Both Bachelor and Master thesis, used extensively OpenCV library for computer vision development.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-      <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
-  data-category='all, '
->
-  <a class="text-decoration-none" href="https://www.dspace.com/en/inc/home/products/sw/experimentandvisualization/controldesk.cfm" title="dSpace &amp; ControlDesk" target="_blank" rel="noopener">
-    <div class="card">
-      <div class="card-head d-flex">
-        
-          
-          <h5 class="card-title"><span class="images/skills/dspace.png"> dSpace &amp; ControlDesk</span></h5>
-        
-      </div>
-      <div class="card-body text-justify pt-1 pb-1">
-        <p class="card-text">Professional experience applied in two customer AD (Autonomous Driving) projects, for calibration of motion control function components.</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    
-    </div>
-  </div>
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-        
-          <div class="container-fluid section-holder d-flex bg-primary">
-            
-
-  
-
-
-<div class="container-fluid anchor pb-5 experiences-section">
-  
-    <h1 class="text-center">
-        <span id="experiences"></span>Experiences</h1>
-  
-
-  <div class="container timeline text-justify">
-   
-   
-     
-       <div class="row align-items-center  d-flex">
-         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
-  <div class="circle fw-bold">1</div>
-</div>
-
-         <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
-        
-        
-        
-        
-        
-        
-        <div class="company-heading">
-            <h5><a href=https://www.aumovio.com/ title="Aumovio SE" target="_blank" rel="noopener">Aumovio SE</a></h5>
-            <p class="text-muted">
-                Jan 2024 - Present
-            </p>
-        </div>
-        <p class="text-muted">
-            <i class="fa-solid fa-location-dot"></i> Regensburg, Germany
-        </p>
-        
-        <p>We are the Adaptive Powerhouse for Future Mobility, making it safe, exciting, connected, and autonomous. To achieve this goal, we develop, produce and supply technologically leading and market-oriented products, hardware, software and modern mobility solutions.</p>
-    </div>
-    
-    <div class="positions">
-    
-        <div class="company-heading">
-            <h5 class="designation">Software Technical Project Leader &amp; Software Quote Lead</h5>
-            <p class="text-muted">Jan 2024 -  Present </p>
-        </div>
-        
-        
-            <h6 class="text-heading">Responsibilities:</h6>
-            <ul class="justify-content-around">
-                
-                    <li>Act as SW Technical Project Lead and SW Quote Lead for new customer programs, including scope clarification, feature sizing, demo preparation, R&amp;D estimation, and Software Bill of Materials definition.</li>
-                
-                    <li>Lead cross-functional software teams across embedded, CI/CD, and quality domains for Body Control Unit (BCU) programs.</li>
-                
-                    <li>Own end-to-end software release cycles, including backlog planning, sprint tracking, and feature delivery for Tier-1 OEM customers.</li>
-                
-                    <li>Coordinate between software architecture, DevOps, and test automation teams to align on product milestones and software quality goals.</li>
-                
-                    <li>Participate in regular project steering meetings with customers and internal stakeholders, reporting KPIs, risk, and technical progress.</li>
-                
-                    <li>Ensure ASPICE-compliant software development processes, with active participation in internal audits and release readiness checks.</li>
-                
-            </ul>
-        
-    
-    </div>
-</div>
-
-       </div>
-     
-     
-       <div class="row horizontal-line">
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-  <div class="col-10 col-lg-8">
-    <hr />
-  </div>
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-</div>
-
-     
-   
-     
-       <div class="row align-items-center justify-content-end d-flex">
-         <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
-        
-        
-        
-        
-        
-        
-        <div class="company-heading">
-            <h5><a href=https://www.continental.com/en/ title="Continental AG" target="_blank" rel="noopener">Continental AG</a></h5>
-            <p class="text-muted">
-                Jul 2023 - Jan 2024
-            </p>
-        </div>
-        <p class="text-muted">
-            <i class="fa-solid fa-location-dot"></i> Regensburg, Germany
-        </p>
-        
-        <p>Continental develops pioneering technologies and services for sustainable and connected mobility of people and their goods. Founded in 1871, the technology company offers safe, efficient, intelligent and affordable solutions for vehicles, machines, traffic and transportation.</p>
-    </div>
-    
-    <div class="positions">
-    
-        <div class="company-heading">
-            <h5 class="designation">Software Product Owner / BCU Functions</h5>
-            <p class="text-muted">Jul 2023 -  Jan 2024 </p>
-        </div>
-        
-        
-            <h6 class="text-heading">Responsibilities:</h6>
-            <ul class="justify-content-around">
-                
-                    <li>Technical control, coordination and tracking of an agile SW team</li>
-                
-                    <li>Responsibility for the planning, implementation and verification of complex functions and components</li>
-                
-                    <li>Technical management of the assigned employees across several locations</li>
-                
-                    <li>Coordination, definition and tracking of the associated internal and external work packages</li>
-                
-                    <li>Making technical decisions (concepts and interfaces) together with the team</li>
-                
-                    <li>Support of the overall software project manager through tracking and reporting</li>
-                
-                    <li>Participation in regular meetings with external partners and technical customer meetings</li>
-                
-                    <li>Participation in the SW internal and cross-disciplinary reviews</li>
-                
-                    <li>Planning of all quality assurance measures</li>
-                
-                    <li>Identification of optimization potentials</li>
-                
-                    <li>Participation in the preparation of offers for new and to be changed components</li>
-                
-            </ul>
-        
-    
-    </div>
-</div>
-
-         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
-  <div class="circle fw-bold">2</div>
-</div>
-
-       </div>
-     
-     
-       <div class="row horizontal-line">
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-  <div class="col-10 col-lg-8">
-    <hr />
-  </div>
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-</div>
-
-     
-   
-     
-       <div class="row align-items-center  d-flex">
-         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
-  <div class="circle fw-bold">3</div>
-</div>
-
-         <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
-        
-        
-        
-        
-        
-        
-        <div class="company-heading">
-            <h5><a href=https://www.avl-functions.com/en/ title="AVL Software &amp; Functions GmbH" target="_blank" rel="noopener">AVL Software &amp; Functions GmbH</a></h5>
-            <p class="text-muted">
-                Nov 2020 - Jun 2023
-            </p>
-        </div>
-        <p class="text-muted">
-            <i class="fa-solid fa-location-dot"></i> Regensburg, Germany
-        </p>
-        
-        <p>AVL Software &amp; Functions is the world&rsquo;s largest independent company for the development, simulation and testing of powertrain systems and ADAS/AD features.</p>
-    </div>
-    
-    <div class="positions">
-    
-        <div class="company-heading">
-            <h5 class="designation">ADAS / AD Expert Development Engineer</h5>
-            <p class="text-muted">Nov 2020 -  Jun 2023 </p>
-        </div>
-        
-        
-            <h6 class="text-heading">Responsibilities:</h6>
-            <ul class="justify-content-around">
-                
-                    <li>Technical lead role in creation of C++ development, testing, integration and review process, focused in ADAS development.</li>
-                
-                    <li>Developement engineer in funding-project for ADAS-focused sensor evaluation methodology and test-bench facility in Roding, Germany.</li>
-                
-                    <li>Expert functional and software developer of motion planning in C++.</li>
-                
-            </ul>
-        
-    
-    </div>
-</div>
-
-       </div>
-     
-     
-       <div class="row horizontal-line">
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-  <div class="col-10 col-lg-8">
-    <hr />
-  </div>
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-</div>
-
-     
-   
-     
-       <div class="row align-items-center justify-content-end d-flex">
-         <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
-        
-        
-        
-        
-        
-        
-        <div class="company-heading">
-            <h5><a href=https://www.avl-functions.com/en/ title="AVL Software &amp; Functions GmbH" target="_blank" rel="noopener">AVL Software &amp; Functions GmbH</a></h5>
-            <p class="text-muted">
-                Feb 2018 - Nov 2020
-            </p>
-        </div>
-        <p class="text-muted">
-            <i class="fa-solid fa-location-dot"></i> Regensburg, Germany
-        </p>
-        
-        <p>AVL Software &amp; Functions is the world&rsquo;s largest independent company for the development, simulation and testing of powertrain systems and ADAS/AD features.</p>
-    </div>
-    
-    <div class="positions">
-    
-        <div class="company-heading">
-            <h5 class="designation">ADAS / AD Development Engineer</h5>
-            <p class="text-muted">Feb 2018 -  Nov 2020 </p>
-        </div>
-        
-        
-            <h6 class="text-heading">Responsibilities:</h6>
-            <ul class="justify-content-around">
-                
-                    <li>Responsible of functional and software development of motion planning and motion control in C++ and Simulink.</li>
-                
-                    <li>Rapid prototype developer in C++ and MATLAB.</li>
-                
-                    <li>Participant in 3 customer projects, focused on waypoint-based navigation, target following and point to point navigation</li>
-                
-                    <li>Participant in 2 internal R&amp;D projects for automated parking and intersection navigation.</li>
-                
-                    <li>Practical experience in vehicle integration and testing of the corresponding function components to most of the projects, with the use of ROS.</li>
-                
-            </ul>
-        
-    
-    </div>
-</div>
-
-         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
-  <div class="circle fw-bold">4</div>
-</div>
-
-       </div>
-     
-     
-       <div class="row horizontal-line">
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-  <div class="col-10 col-lg-8">
-    <hr />
-  </div>
-  <div class="col-1 col-lg-2 timeline-side-div">
-    <div class="corner"></div>
-  </div>
-</div>
-
-     
-   
-     
-       <div class="row align-items-center  d-flex">
-         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
-  <div class="circle fw-bold">5</div>
-</div>
-
-         <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
-        
-        
-        
-        
-        
-        
-        <div class="company-heading">
-            <h5><a href=https://www.airbus.com title="Airbus SE" target="_blank" rel="noopener">Airbus SE</a></h5>
-            <p class="text-muted">
-                Jan 2017 - Sep 2017
-            </p>
-        </div>
-        <p class="text-muted">
-            <i class="fa-solid fa-location-dot"></i> Chester, UK
-        </p>
-        
-        <p>Airbus SE is a European multinational aerospace corporation.</p>
-    </div>
-    
-    <div class="positions">
-    
-        <div class="company-heading">
-            <h5 class="designation">M.Sc. Thesis</h5>
-            <p class="text-muted">Jan 2017 -  Sep 2017 </p>
-        </div>
-        
-        
-            <h6 class="text-heading">Responsibilities:</h6>
-            <ul class="justify-content-around">
-                
-                    <li>Research of an innovative project for indoor ispection of wing panels during their construction, with the use of a UAV equiped with UV light.</li>
-                
-                    <li>Practical implementation of indoor localisation with the use of RTLS (Real-Time Location System) sensors.</li>
-                
-                    <li>Practical implementation of computer vision system, capable of processing dark ultraviolet pictures and recognising/evaluating potential defects onboard the under-construction wing panel.</li>
-                
-            </ul>
-        
-    
-    </div>
-</div>
-
-       </div>
-     
-     
-   
-  </div>
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-        
-          <div class="container-fluid section-holder d-flex bg-secondary">
-            
-
-  
-
-
-<div class="container-fluid anchor pb-5 projects-section" id="projects">
-  
-    <h1 class="text-center">
-        <span id="projects"></span>Projects</h1>
-  
-  <div class="container ms-auto text-center">
-    <div class="btn-group flex-wrap" role="group" id="project-filter-buttons-projects">
-      
-      <button type="button" class="btn btn-dark project-filtr-control" data-filter="all" data-section="projects">
-        All
+#mobileMenu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.mm-link{opacity:0;transform:translateY(10px);transition:opacity .3s ease,transform .34s var(--ease-out)}
+#mobileMenu.open .mm-link{opacity:1;transform:none}
+#mobileMenu.open .mm-link:nth-child(1){transition-delay:.04s}
+#mobileMenu.open .mm-link:nth-child(2){transition-delay:.08s}
+#mobileMenu.open .mm-link:nth-child(3){transition-delay:.12s}
+#mobileMenu.open .mm-link:nth-child(4){transition-delay:.16s}
+#mobileMenu.open .mm-link:nth-child(5){transition-delay:.2s}
+#mobileMenu.open .mm-link:nth-child(6){transition-delay:.24s}
+#mobileMenu.open .mm-link:nth-child(7){transition-delay:.28s}
+.nav-desktop{display:flex}
+.nav-mobile{display:none}
+@media(max-width:860px){.nav-desktop{display:none}.nav-mobile{display:flex}}
+</style>
+</head>
+<body>
+<div id="root" style="background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;min-height:100vh;overflow-x:clip;transition:background .4s ease,color .4s ease;">
+
+  <div id="progbar" style="position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:120;"></div>
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,48px);backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line);">
+    <a href="#top" style="text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;">
+      <span style="display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-size:13px;">PT</span>
+      <span style="font-size:15px;">Panos Tsilivis</span>
+    </a>
+    <div class="nav-desktop" style="align-items:center;gap:26px;">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#photography" class="nav-link">Photos</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button id="themeBtn" class="theme-btn" style="cursor:pointer;display:flex;align-items:center;gap:8px;background:var(--bg-2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:7px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></span><span id="themeLabel">Dark</span>
       </button>
-      
-      <button type="button" class="btn btn-dark project-filtr-control" data-filter="academic" data-section="projects">
-        Academic
+    </div>
+    <div class="nav-mobile" style="align-items:center;gap:12px;">
+      <button id="themeBtnM" style="cursor:pointer;width:38px;height:38px;display:grid;place-items:center;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;"><span style="width:9px;height:9px;border-radius:50%;background:var(--accent);"></span></button>
+      <button id="menuBtn" style="cursor:pointer;width:38px;height:38px;display:grid;gap:5px;place-content:center;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;">
+        <span style="width:18px;height:2px;background:var(--ink);display:block;"></span>
+        <span style="width:18px;height:2px;background:var(--ink);display:block;"></span>
+        <span style="width:18px;height:2px;background:var(--ink);display:block;"></span>
       </button>
-      
+    </div>
+  </nav>
+
+  <div id="mobileMenu" style="position:fixed;inset:0;z-index:99;background:var(--bg);display:flex;flex-direction:column;justify-content:center;gap:8px;padding:0 32px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:opacity .24s ease,transform .28s var(--ease-out),visibility .24s;">
+    <a href="#about" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">About</a>
+    <a href="#experience" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Experience</a>
+    <a href="#education" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Education</a>
+    <a href="#skills" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Skills</a>
+    <a href="#projects" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Projects</a>
+    <a href="#photography" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Photos</a>
+    <a href="#contact" class="mm-link" style="text-decoration:none;color:var(--ink);font-size:34px;font-weight:600;letter-spacing:-.02em;padding:10px 0;">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <header id="top" style="max-width:1280px;margin:0 auto;padding:clamp(120px,15vw,170px) clamp(20px,4vw,48px) 40px;">
+    <div style="display:flex;gap:clamp(32px,5vw,64px);flex-wrap:wrap;align-items:center;">
+      <div data-reveal style="flex:1 1 420px;min-width:300px;">
+        <div style="display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:28px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pt-blink 1.6s infinite;"></span>
+          Software Technical Project Leader · Regensburg, DE
+        </div>
+        <h1 style="font-size:clamp(44px,8.2vw,92px);line-height:.98;letter-spacing:-.035em;font-weight:700;margin:0 0 22px;">Engineering<br>software that <span style="color:var(--accent);">moves.</span></h1>
+        <p style="font-size:clamp(17px,2vw,21px);line-height:1.55;color:var(--muted);max-width:30ch;margin:0 0 32px;">Software technical leadership rooted in C++, AUTOSAR and Automotive SPICE. I align teams, set engineering standards, and steer complex projects from architecture all the way to delivery.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#projects" class="btn-accent" style="text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;box-shadow:0 6px 20px -8px var(--accent);">View my work</a>
+          <a href="#contact" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;border:1px solid var(--line);">Get in touch</a>
+        </div>
+        <div style="margin-top:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.04em;">C++ · AUTOSAR · ASPICE · ISO 26262</div>
+      </div>
+
+      <div data-reveal data-reveal-delay="120" style="position:relative;flex:1 1 400px;min-width:300px;height:clamp(360px,42vw,520px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-2);box-shadow:0 24px 60px -32px rgba(0,0,0,.4);">
+        <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+        <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;pointer-events:none;">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pt-blink 1.4s infinite;"></span><span id="simLabel">e-e.network.live</span>
+        </div>
+        <div style="position:absolute;top:12px;left:12px;width:18px;height:18px;border-top:1.5px solid var(--muted);border-left:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+        <div style="position:absolute;top:12px;right:12px;width:18px;height:18px;border-top:1.5px solid var(--muted);border-right:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+        <div style="position:absolute;bottom:12px;left:12px;width:18px;height:18px;border-bottom:1.5px solid var(--muted);border-left:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+        <div style="position:absolute;bottom:12px;right:12px;width:18px;height:18px;border-bottom:1.5px solid var(--muted);border-right:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+        <div style="position:absolute;bottom:14px;left:14px;right:14px;display:flex;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;pointer-events:none;">
+          <div><span id="hudL1">FRAMES</span> <span id="hudSpd" style="color:var(--ink);">6120</span></div>
+          <div><span id="hudL2">BUS LOAD</span> <span id="hudHdg" style="color:var(--ink);">42%</span></div>
+          <div><span id="hudL3">ACTIVE</span> <span id="hudDist" style="color:var(--accent);">3</span></div>
+          <div style="margin-left:auto;opacity:.8;"><span id="simHint">click an ECU to expand</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--bg-2);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);">
+    <div style="display:inline-flex;gap:28px;animation:pt-marquee 32s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.05em;color:var(--muted);will-change:transform;">
+      <span>C++&nbsp;&nbsp;/&nbsp;&nbsp;AUTOSAR&nbsp;&nbsp;/&nbsp;&nbsp;Automotive SPICE&nbsp;&nbsp;/&nbsp;&nbsp;MISRA C++&nbsp;&nbsp;/&nbsp;&nbsp;ISO 26262&nbsp;&nbsp;/&nbsp;&nbsp;Functional Safety&nbsp;&nbsp;/&nbsp;&nbsp;Software Architecture&nbsp;&nbsp;/&nbsp;&nbsp;Technical Leadership&nbsp;&nbsp;/&nbsp;&nbsp;Code Review&nbsp;&nbsp;/&nbsp;&nbsp;CI·CD&nbsp;&nbsp;/&nbsp;&nbsp;Integration &amp; Test&nbsp;&nbsp;/&nbsp;&nbsp;ECU&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+      <span aria-hidden="true">C++&nbsp;&nbsp;/&nbsp;&nbsp;AUTOSAR&nbsp;&nbsp;/&nbsp;&nbsp;Automotive SPICE&nbsp;&nbsp;/&nbsp;&nbsp;MISRA C++&nbsp;&nbsp;/&nbsp;&nbsp;ISO 26262&nbsp;&nbsp;/&nbsp;&nbsp;Functional Safety&nbsp;&nbsp;/&nbsp;&nbsp;Software Architecture&nbsp;&nbsp;/&nbsp;&nbsp;Technical Leadership&nbsp;&nbsp;/&nbsp;&nbsp;Code Review&nbsp;&nbsp;/&nbsp;&nbsp;CI·CD&nbsp;&nbsp;/&nbsp;&nbsp;Integration &amp; Test&nbsp;&nbsp;/&nbsp;&nbsp;ECU&nbsp;&nbsp;/&nbsp;&nbsp;</span>
     </div>
   </div>
-  <div class="container filtr-projects" data-section="projects">
-    <div class="row" id="project-card-holder-projects">
-      
-        <div class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item" data-category='all, academic,computer vision,localisation,uav,drone,thesis'>
-  <div class="card mt-1">
-    <div class="card">
-      <a href="files/TSILIVIS_AVDC_Thesis.pdf" target="_blank" rel="noopener" >
-        
-        <div class="card-header">
-          <div>
-            <div class="d-flex">
-              
 
-              <h5 class="card-title mb-0">Autonomous Indoor Ispection of Aircraft Wing Panel with UAV - Image Processing and Localisation</h5>
-            </div>
-            <div class="sub-title">
-              <span>Developer &amp; Author</span>
-              <span>Cranfield University</span>
-            </div>
+  <!-- ABOUT -->
+  <section id="about" style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+    <div style="display:flex;gap:clamp(32px,6vw,80px);flex-wrap:wrap;">
+      <div data-reveal style="flex:0 0 auto;width:200px;padding-top:8px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 01 ) About</div>
+        <img src="images/panos_tsilivis.jpg" alt="Panos Tsilivis" width="150" height="150" loading="lazy" style="margin-top:22px;width:clamp(120px,15vw,168px);height:clamp(120px,15vw,168px);border-radius:50%;object-fit:cover;object-position:50% 22%;border:1px solid var(--line);box-shadow:0 14px 34px -16px rgba(0,0,0,.45);animation:pt-float 6s ease-in-out infinite;" />
+      </div>
+      <div data-reveal data-reveal-delay="80" style="flex:1 1 420px;min-width:280px;">
+        <p style="font-size:clamp(24px,3.4vw,38px);line-height:1.32;font-weight:500;letter-spacing:-.02em;margin:0 0 28px;">A software technical leader who turns complex, demanding projects into shipped, well-engineered code — and brings the team along for the ride.</p>
+        <p style="font-size:17px;line-height:1.7;color:var(--muted);margin:0 0 18px;">A BCU Software Product Owner and former Autonomous Vehicles Development Engineer. I lead cross-functional C++ teams across embedded, CI/CD and quality domains — setting engineering standards and steering ASPICE-compliant delivery end to end, hands-on where it counts. Innovative, progressive thinking is the part I enjoy most, backed by strong organization and communication.</p>
+        <p style="font-size:17px;line-height:1.7;color:var(--muted);margin:0;">An experienced C++, Python, MATLAB &amp; Simulink and ROS developer, with applications directed to motion planning and control. Native Greek, fluent English, based in Regensburg, Germany.</p>
+        <div style="display:flex;gap:36px;flex-wrap:wrap;margin-top:36px;">
+          <div><div style="font-size:30px;font-weight:700;letter-spacing:-.02em;">6+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;">YEARS IN ENGINEERING</div></div>
+          <div><div style="font-size:30px;font-weight:700;letter-spacing:-.02em;">8+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;">PROJECTS DELIVERED</div></div>
+          <div><div style="font-size:30px;font-weight:700;letter-spacing:-.02em;">MSc</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;">CRANFIELD, UK</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+        <h2 style="font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.03em;margin:0;">Experience</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 02 ) Two worlds, one engineer</span>
+      </div>
+
+      <div style="display:flex;gap:clamp(28px,4.5vw,56px);flex-wrap:wrap;align-items:flex-start;">
+        <div data-reveal style="flex:1 1 360px;min-width:300px;position:sticky;top:92px;">
+          <div style="position:relative;height:clamp(340px,44vw,440px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg);box-shadow:0 24px 60px -34px rgba(0,0,0,.4);">
+            <canvas id="hwyCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+            <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;pointer-events:none;"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pt-blink 1.4s infinite;"></span>quintic_planner.live</div>
+            <div style="position:absolute;top:12px;left:12px;width:18px;height:18px;border-top:1.5px solid var(--muted);border-left:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+            <div style="position:absolute;top:12px;right:12px;width:18px;height:18px;border-top:1.5px solid var(--muted);border-right:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+            <div style="position:absolute;bottom:12px;left:12px;width:18px;height:18px;border-bottom:1.5px solid var(--muted);border-left:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+            <div style="position:absolute;bottom:12px;right:12px;width:18px;height:18px;border-bottom:1.5px solid var(--muted);border-right:1.5px solid var(--muted);opacity:.5;pointer-events:none;"></div>
+            <div style="position:absolute;bottom:14px;left:14px;right:14px;display:flex;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;pointer-events:none;"><div><span id="hwyState" style="color:var(--ink);">lane keep</span></div><div>&Delta;y <span id="hwyLat" style="color:var(--accent);">0.0</span> m</div><div style="margin-left:auto;opacity:.8;">cursor &rarr; move obstacle</div></div>
+          </div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.65;color:var(--muted);letter-spacing:.03em;margin:16px 2px 0;">Quintic-polynomial lane change &mdash; a jerk-minimal, collision-free trajectory steering the ego vehicle around a stopped obstacle on a curving two-way road. The other half of my world.</p>
+        </div>
+
+        <div style="flex:1 1 440px;min-width:300px;">
+          <div data-reveal style="position:relative;border-left:2px solid var(--line);padding-left:28px;margin-bottom:30px;">
+            <span style="position:absolute;left:-9px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--bg-2);"></span>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent-ink);background:var(--accent);padding:3px 9px;border-radius:6px;letter-spacing:.06em;">PRESENT</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Jan 2024 · Regensburg, DE</span></div>
+            <h3 style="font-size:clamp(22px,2.6vw,27px);font-weight:700;letter-spacing:-.02em;margin:0 0 4px;color:var(--ink);">Aumovio SE</h3>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.02em;margin-bottom:10px;">Software Technical Project Leader &amp; Software Quote Lead</div>
+            <p style="font-size:16px;line-height:1.65;color:var(--muted);margin:0;max-width:62ch;">SW Technical &amp; Quote Lead for new customer programs — scope clarification, feature sizing, R&amp;D estimation and Software Bill of Materials. Lead cross-functional teams across embedded, CI/CD and quality for Body Control Unit programs, owning end-to-end release cycles and ASPICE-compliant processes for Tier-1 OEM customers.</p>
+          </div>
+
+          <div data-reveal style="position:relative;border-left:2px solid var(--line);padding-left:28px;margin-bottom:30px;">
+            <span style="position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg-3);border:2px solid var(--muted);"></span>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Jul 2023 – Jan 2024 · Regensburg, DE</span></div>
+            <h3 style="font-size:clamp(22px,2.6vw,27px);font-weight:700;letter-spacing:-.02em;margin:0 0 4px;color:var(--ink);">Continental AG</h3>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.02em;margin-bottom:10px;">Software Product Owner · BCU Functions</div>
+            <p style="font-size:16px;line-height:1.65;color:var(--muted);margin:0;max-width:62ch;">Technical control, coordination and tracking of an agile SW team. Responsible for the planning, implementation and verification of complex functions and components, and technical management of assigned engineers across several locations.</p>
+          </div>
+
+          <div data-reveal style="position:relative;border-left:2px solid var(--line);padding-left:28px;margin-bottom:30px;">
+            <span style="position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg-3);border:2px solid var(--muted);"></span>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Nov 2020 – Jun 2023 · Regensburg, DE</span></div>
+            <h3 style="font-size:clamp(22px,2.6vw,27px);font-weight:700;letter-spacing:-.02em;margin:0 0 4px;color:var(--ink);">AVL Software &amp; Functions</h3>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.02em;margin-bottom:10px;">ADAS / AD Expert Development Engineer</div>
+            <p style="font-size:16px;line-height:1.65;color:var(--muted);margin:0;max-width:62ch;">Technical lead for the C++ development, testing, integration and review process, focused on ADAS. Development engineer in a funding project for an ADAS-focused sensor-evaluation methodology and test-bench facility in Roding — and expert functional/software developer of motion planning in C++.</p>
+          </div>
+
+          <div data-reveal style="position:relative;border-left:2px solid var(--line);padding-left:28px;">
+            <span style="position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg-3);border:2px solid var(--muted);"></span>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Feb 2018 – Nov 2020 · Regensburg, DE</span></div>
+            <h3 style="font-size:clamp(22px,2.6vw,27px);font-weight:700;letter-spacing:-.02em;margin:0 0 4px;color:var(--ink);">AVL Software &amp; Functions</h3>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.02em;margin-bottom:10px;">ADAS / AD Development Engineer</div>
+            <p style="font-size:16px;line-height:1.65;color:var(--muted);margin:0;max-width:62ch;">Functional &amp; software development of motion planning and control in C++ and Simulink across three customer projects — waypoint-based navigation, target following and point-to-point navigation — plus two internal R&amp;D projects. Hands-on vehicle integration and testing with ROS.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+    <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+      <h2 style="font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.03em;margin:0;">Education</h2>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 03 ) Where it started</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+      <div data-reveal style="border:1px solid var(--line);border-radius:14px;padding:28px;background:var(--bg-2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">2016 – 2017 · Cranfield, UK</div>
+        <h3 style="font-size:22px;font-weight:700;letter-spacing:-.02em;margin:0 0 4px;">M.Sc. Aerospace Engineering</h3>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);margin-bottom:12px;">Cranfield University</div>
+        <p style="font-size:15px;line-height:1.65;color:var(--muted);margin:0;">Specialisation in Autonomous Vehicle Dynamics &amp; Control. Thesis conducted at <strong style="color:var(--ink);font-weight:600;">Airbus SE (UK)</strong>: autonomous indoor inspection of aircraft wing panels with a UV-equipped UAV — onboard computer vision for defect recognition and RTLS-based indoor localisation.</p>
+      </div>
+      <div data-reveal data-reveal-delay="80" style="border:1px solid var(--line);border-radius:14px;padding:28px;background:var(--bg-2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">Athens, Greece</div>
+        <h3 style="font-size:22px;font-weight:700;letter-spacing:-.02em;margin:0 0 4px;">B.Sc. Automation Engineering</h3>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);margin-bottom:12px;">University of West Attica</div>
+        <p style="font-size:15px;line-height:1.65;color:var(--muted);margin:0;">Thesis on autonomous navigation of unmanned aerial vehicles — SLAM-based indoor localisation using an onboard monocular camera, with drone stabilisation through motion-control libraries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+        <h2 style="font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.03em;margin:0;">Tech stack</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 04 ) Tools of the trade</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;">Languages</div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px;">
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">C++ / AUTOSAR C++14</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Python</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">MATLAB &amp; Simulink</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">CMake</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Bash / Shell</span>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="80" class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;">Tools &amp; Platforms</div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px;">
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">ROS</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">OpenCV</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Docker</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Kubernetes</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Linux / WSL</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Jenkins CI</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Azure DevOps</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">PTC Integrity &amp; Git</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Vires VTD</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Unreal Engine 4</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">dSpace &amp; ControlDesk</span>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="160" class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;">Leadership &amp; Domains</div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px;">
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Technical Leadership</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Software Architecture</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">ADAS / AD</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Motion Planning &amp; Control</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Automotive SPICE</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">ISO 26262</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">Code Review &amp; Standards</span>
+            <span style="font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;">CI / CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+    <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+      <h2 style="font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.03em;margin:0;">Selected work</h2>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 05 ) Projects &amp; research</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;">
+      <a data-reveal class="proj-card" href="https://github.com/ptsilivis/AutonomousGuy" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);border:1px solid var(--accent);border-radius:16px;padding:28px;background:var(--bg-2);display:flex;flex-direction:column;gap:12px;min-height:230px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent);">AI · EMBEDDED AUTOMOTIVE · NEW</div>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0;">AutonomousGuy</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;">AI skill prompts that give coding agents real embedded-automotive expertise — AUTOSAR, MISRA, ISO 26262 and ECU development.</p>
+        <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);">GitHub →</span>
       </a>
-      <div class="card-body text-justify pt-1 pb-2">
-        <p>M.Sc. Thesis focused on indoor ispection of an aircraft wing panel with the use of a UAV. The inspection of potential defects performed in dark conditions under UV light. Computer vision and indoor localisation were the two main topics.</p>
-        
-        <div class="project-card-footer">
-          
-          <div class="project-tags-holder">
-            
-            <span class="btn badge btn-info">
-              academic
-            </span>
-            
-            <span class="btn badge btn-info">
-              computer vision
-            </span>
-            
-            <span class="btn badge btn-info">
-              localisation
-            </span>
-            
-            <span class="btn badge btn-info">
-              uav
-            </span>
-            
-            <span class="btn badge btn-info">
-              drone
-            </span>
-            
-            <span class="btn badge btn-info">
-              thesis
-            </span>
-            
-          </div>
-          
-          <div class="project-btn-holder">
-            
-            <span>
-              <a class="btn btn-outline-info btn-sm" href="files/TSILIVIS_AVDC_Thesis.pdf" target="#">Details</a>
-            </span>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-        <div class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item" data-category='all, academic,thesis,uav,drone,computer vision'>
-  <div class="card mt-1">
-    <div class="card">
-      <a href="files/bsc_thesis.pdf" target="_blank" rel="noopener" >
-        
-        <div class="card-header">
-          <div>
-            <div class="d-flex">
-              
-
-              <h5 class="card-title mb-0">Autonomous Navigation of Unmanned Aerial Vehicles</h5>
-            </div>
-            <div class="sub-title">
-              <span>Developer &amp; Author</span>
-              <span>University of West Attica</span>
-            </div>
-          </div>
-        </div>
+      <a data-reveal data-reveal-delay="80" class="proj-card" href="https://github.com/ptsilivis" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--bg-2);display:flex;flex-direction:column;gap:12px;min-height:230px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent);">MATLAB · OPEN SOURCE</div>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0;">path_planning</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;">A collection of path-planning algorithms implemented and explored in MATLAB.</p>
+        <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);">Repository →</span>
       </a>
-      <div class="card-body text-justify pt-1 pb-2">
-        <p>B.Sc. Thesis focused on indoor localisation of a UAV, with the use of SLAM methods applied in the onboard monocular camera. Stabilisation of the drone with the use of motion control libraries.</p>
-        
-        <div class="project-card-footer">
-          
-          <div class="project-tags-holder">
-            
-            <span class="btn badge btn-info">
-              academic
-            </span>
-            
-            <span class="btn badge btn-info">
-              thesis
-            </span>
-            
-            <span class="btn badge btn-info">
-              uav
-            </span>
-            
-            <span class="btn badge btn-info">
-              drone
-            </span>
-            
-            <span class="btn badge btn-info">
-              computer vision
-            </span>
-            
-          </div>
-          
-          <div class="project-btn-holder">
-            
-            <span>
-              <a class="btn btn-outline-info btn-sm" href="files/bsc_thesis.pdf" target="#">Details</a>
-            </span>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-        <div class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item" data-category='all, academic,paper,computer vision'>
-  <div class="card mt-1">
-    <div class="card">
-      <a href="files/SLAM%20Survey.pdf" target="_blank" rel="noopener" >
-        
-        <div class="card-header">
-          <div>
-            <div class="d-flex">
-              
-
-              <h5 class="card-title mb-0">Simultaneous Localization and Mapping for micro Unmanned Aerial Vehicles</h5>
-            </div>
-            <div class="sub-title">
-              <span>Author</span>
-              <span>eRA International Scientific Conference</span>
-            </div>
-          </div>
-        </div>
+      <a data-reveal class="proj-card" href="files/TSILIVIS_AVDC_Thesis.pdf" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--bg-2);display:flex;flex-direction:column;gap:12px;min-height:230px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent);">MSc THESIS · CRANFIELD</div>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0;">UAV Wing-Panel Inspection</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;">Autonomous indoor inspection of an aircraft wing panel with a UV-equipped UAV — computer vision defect recognition and RTLS indoor localisation.</p>
+        <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);">Read PDF →</span>
       </a>
-      <div class="card-body text-justify pt-1 pb-2">
-        <p>Survey paper, anylising the most important method of Simultaneous Localisation and Mapping (SLAM), focused on Monocular Camera applications.</p>
-        
-        <div class="project-card-footer">
-          
-          <div class="project-tags-holder">
-            
-            <span class="btn badge btn-info">
-              academic
-            </span>
-            
-            <span class="btn badge btn-info">
-              paper
-            </span>
-            
-            <span class="btn badge btn-info">
-              computer vision
-            </span>
-            
-          </div>
-          
-          <div class="project-btn-holder">
-            
-            <span>
-              <a class="btn btn-outline-info btn-sm" href="files/SLAM%20Survey.pdf" target="#">Details</a>
-            </span>
-            
-          </div>
+      <a data-reveal data-reveal-delay="80" class="proj-card" href="files/bsc_thesis.pdf" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--bg-2);display:flex;flex-direction:column;gap:12px;min-height:230px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent);">BSc THESIS · UWA</div>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0;">Autonomous UAV Navigation</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;">Indoor localisation of a UAV with SLAM applied to an onboard monocular camera, stabilised through motion-control libraries.</p>
+        <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);">Read PDF →</span>
+      </a>
+      <a data-reveal data-reveal-delay="160" class="proj-card" href="files/SLAM Survey.pdf" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--bg-2);display:flex;flex-direction:column;gap:12px;min-height:230px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent);">RESEARCH · SURVEY</div>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0;">SLAM Survey</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;">Survey paper analysing the most important simultaneous localisation &amp; mapping methods, focused on monocular-camera applications.</p>
+        <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);">Read PDF →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PHOTOGRAPHY -->
+  <section id="photography" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div style="max-width:1120px;margin:0 auto;padding:clamp(80px,11vw,140px) clamp(20px,4vw,48px);">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
+        <div>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 06 ) Off the clock</span>
+          <h2 style="font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.03em;margin:10px 0 0;">Through the lens</h2>
         </div>
+        <a href="https://unsplash.com/@ptsilivis" target="_blank" rel="noopener" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:13px 22px;border-radius:12px;border:1px solid var(--line);white-space:nowrap;">View on Unsplash →</a>
+      </div>
+      <p data-reveal style="font-size:17px;line-height:1.7;color:var(--muted);max-width:60ch;margin:0 0 32px;">Street, architecture and cars — shot around Regensburg and beyond, pulled live from my Unsplash.</p>
+      <div id="galleryGrid" data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
+        <div class="photo-slot" style="width:100%;aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">street</div>
+        <div class="photo-slot" style="width:100%;aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">architecture</div>
+        <div class="photo-slot" style="width:100%;aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">cars</div>
+        <div class="photo-slot" style="width:100%;aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">cycling</div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-      
-    </div>
-  </div>
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-        
-          <div class="container-fluid section-holder d-flex bg-primary">
-            
-
-  
-
-
-
-
-
-
-<div class="container-fluid anchor pb-5 recent-posts-section">
-  
-    <h1 class="text-center" style="display: none">
-        <span id="recent-posts"></span>Recent Posts</h1>
-  
-  <div class="container">
-    <div class="row" id="recent-post-cards">
-      
-      
-      
-    </div>
-  </div>
-  
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-        
-          <div class="container-fluid section-holder d-flex bg-secondary">
-            
-
-  
-
-
-<div class="container-fluid anchor pb-5 achievements-section">
-  
-    <h1 class="text-center">
-        <span id="achievements"></span>Achievements</h1>
-  
-  <div class="container">
-    <div class="row achievements-gallery" id="gallery-achievements">
-    </div>
-  </div>
-  
-  <div class="d-none achievements-holder" id="achievements-holder-achievements">
-    
-      
-
-
-
-
-
-  
-  
-  
-  
-
-
-<div 
-  class="achievement-entry text-center"
-  style="background-image: url('/images/achievements/graduation-cap_hu_430eba4bbcd1b3b0.jpg');"
->
-  <i class="fa-solid fa-xmark hidden"></i>
-  <i class="fa-solid fa-magnifying-glass-plus" id="enlarge-icon"></i>
-  <h4 class="title" id="achievement-title">Graduation</h4>
-  <div class="caption hidden col-lg-6 text-start" id="caption">
-    <h4>Graduation</h4>
-    <p>Received Bachelor of Science (B.Sc.) in Automation Engineering from University of West Attica. Completed Master of Science (M.Sc.) in Aerospace Engineering with specialisation in Autonomous Vehicle Dynamics and Control in Cranfield University.</p>
-    
-  </div>
-  <span style="background-image: url('/images/achievements/graduation-cap_hu_430eba4bbcd1b3b0.jpg');" class="d-none" id="SmallImage" active="true"></span>
-<span  style="background-image: url('/images/achievements/graduation-cap_hu_5fd92a7d1ec83244.jpg');" class="d-none" id="LargeImage"></span>
-</div>
-
-    
-      
-
-
-
-
-
-  
-  
-  
-  
-
-
-<div 
-  class="achievement-entry text-center"
-  style="background-image: url('/images/achievements/basketball_fun_hu_a08fdb78de5e9898.jpg');"
->
-  <i class="fa-solid fa-xmark hidden"></i>
-  <i class="fa-solid fa-magnifying-glass-plus" id="enlarge-icon"></i>
-  <h4 class="title" id="achievement-title">Team Player</h4>
-  <div class="caption hidden col-lg-6 text-start" id="caption">
-    <h4>Team Player</h4>
-    <p>Basketball player since I remember myself.</p>
-    
-  </div>
-  <span style="background-image: url('/images/achievements/basketball_fun_hu_a08fdb78de5e9898.jpg');" class="d-none" id="SmallImage" active="true"></span>
-<span  style="background-image: url('/images/achievements/basketball_fun_hu_bbed5fdec4a8a63c.jpg');" class="d-none" id="LargeImage"></span>
-</div>
-
-    
-      
-
-
-
-
-
-  
-  
-  
-  
-
-
-<div 
-  class="achievement-entry text-center"
-  style="background-image: url('/images/achievements/special_olympics_hu_2132028f2cff833.png');"
->
-  <i class="fa-solid fa-xmark hidden"></i>
-  <i class="fa-solid fa-magnifying-glass-plus" id="enlarge-icon"></i>
-  <h4 class="title" id="achievement-title">Volunteer</h4>
-  <div class="caption hidden col-lg-6 text-start" id="caption">
-    <h4>Volunteer</h4>
-    <p>Recognised for voluntary service to Special Olympics World Summer Games 2011. Acted as a Transportation Assistant, located in the welcoming post of Athens International Airport.</p>
-    
-  </div>
-  <span style="background-image: url('/images/achievements/special_olympics_hu_2132028f2cff833.png');" class="d-none" id="SmallImage" active="true"></span>
-<span  style="background-image: url('/images/achievements/special_olympics_hu_adfd622ca5eae55d.png');" class="d-none" id="LargeImage"></span>
-</div>
-
-    
-  </div>
-</div>
-
-          </div>
-          
-          
-            
-          
-        
-      
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-    
-  
-  
-
-  
-  
-  
-
-  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
-    <div class="container pt-5">
-      <div class="row text-start">
-        
-        <div class="col-md-4 col-sm-12">
-          <h5>Navigation</h5>
-          
-          <ul>
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#about">About</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#skills">Skills</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#experiences">Experiences</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#projects">Projects</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#recent-posts">Recent Posts</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://panostsilivis.com/#achievements">Achievements</a>
-                </li>
-              
-            
-              
-                
-              
-            
-          </ul>
-          
-        </div>
-        
-        
-        <div class="col-md-4 col-sm-12">
-          <h5>Contact me:</h5>
-          <ul>
-            
-          </ul>
-        </div>
-        
-        
-        
-          
-          <div class="col-md-4 col-sm-12">
-            <p>Stay up to date with email notification</p>
-            
-              <form method='post' action='https://blogtrottr.com'>
-              <div class="form-group">
-              <input type='email' class="form-control" name='btr_email' placeholder="Enter email"/><br />
-              <input type='hidden' name='btr_url' value='https://panostsilivis.com//index.xml' />
-              <input type='hidden' name='schedule_type' value='1' />
-              <small id="emailHelp" class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
-              <button type="submit" class="btn btn-info"> Submit </button>
-              </div>
-              </form>
-            
-          </div>
-        
+  <!-- CONTACT -->
+  <section id="contact">
+    <div style="max-width:1120px;margin:0 auto;padding:clamp(90px,12vw,160px) clamp(20px,4vw,48px);">
+      <div data-reveal>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 07 ) Contact</span>
+        <h2 style="font-size:clamp(38px,7vw,82px);font-weight:700;letter-spacing:-.035em;line-height:1.02;margin:14px 0 32px;max-width:16ch;">Let's build something that lasts.</h2>
+      </div>
+      <div data-reveal style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <a href="https://www.linkedin.com/in/panos-tsilivis/" target="_blank" rel="noopener" class="btn-accent" style="text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:16px;padding:16px 28px;border-radius:12px;box-shadow:0 10px 30px -12px var(--accent);">Connect on LinkedIn</a>
+        <a href="https://github.com/ptsilivis" target="_blank" rel="noopener" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:16px;padding:16px 28px;border-radius:12px;border:1px solid var(--line);">GitHub</a>
+        <a href="mailto:p.tsilivis10@gmail.com" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:16px;padding:16px 28px;border-radius:12px;border:1px solid var(--line);">Email</a>
+      </div>
+      <div style="margin-top:64px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.04em;">
+        <span>© <span id="year"></span> Panos Tsilivis</span>
+        <span>Built in Regensburg, DE · panostsilivis.com</span>
       </div>
     </div>
-    
-    
-    <hr />
-    <div class="container">
-      <div class="row text-start">
-        <div class="col-md-4">
-          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu_be7279b2506ad3f1.png" alt="Toha Theme Logo">
-            Toha
-          </a>
-        </div>
-        <div class="col-md-4 text-center">© 2026 Copyright.</div>
-        <div class="col-md-4 text-end">
-          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
-          <img
-            src="/images/hugo-logo.svg"
-            alt="Hugo Logo"
-            height="18"
-          />
-          </a>
-        </div>
-      </div>
-    </div>
-    
-  </footer>
+  </section>
 
+</div>
 
-    <script src="/application.b65229b7306e86a92dad8b825bcd559ecf112e0406e326ecdad46325991c07a2.js" integrity="sha256-tlIptzBuhqktrYuCW81Vns8RLgQG4ybs2tRjJZkcB6I=" defer></script>
+<script>
+(function(){
+  "use strict";
+  var HERO_VIZ = 'network';           // 'network' | 'autosar'
+  var MOTION = true;
+  // Unsplash: paste your public "Access Key" below to pull photos live.
+  // Empty key -> the placeholder tiles stay. Access Key is safe to expose (rate-limited client-id).
+  var UNSPLASH_KEY = 'GCra2vtpdbV8Wcr3IrceipQSF1scLRy4o-f-R_XdFsw';
+  var UNSPLASH_USER = 'ptsilivis';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var motionOn = MOTION && !reduce;
+  var $ = function(id){ return document.getElementById(id); };
+  var setTxt = function(id,t){ var el=$(id); if(el) el.textContent=t; };
 
+  // ---------- theme ----------
+  var theme='light';
+  try{ theme = localStorage.getItem('pt-theme') || 'light'; }catch(e){}
+  document.documentElement.setAttribute('data-theme', theme);
+  var applyThemeLabel = function(){ setTxt('themeLabel', theme==='dark'?'Light':'Dark'); };
+  applyThemeLabel();
+  var toggleTheme = function(){
+    theme = theme==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    try{ localStorage.setItem('pt-theme', theme); }catch(e){}
+    applyThemeLabel();
+  };
+  if($('themeBtn')) $('themeBtn').addEventListener('click', toggleTheme);
+  if($('themeBtnM')) $('themeBtnM').addEventListener('click', toggleTheme);
 
-    
+  // ---------- mobile menu ----------
+  var menu = $('mobileMenu');
+  if($('menuBtn')) $('menuBtn').addEventListener('click', function(){
+    menu.classList.toggle('open');
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.mm-link'), function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); });
+  });
+
+  // ---------- year ----------
+  setTxt('year', String(new Date().getFullYear()));
+
+  // ---------- scroll progress ----------
+  var onScroll = function(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;
+    if($('progbar')) $('progbar').style.width=(p*100).toFixed(2)+'%';
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---------- reveal ----------
+  var initReveal = function(){
+    var els = document.querySelectorAll('[data-reveal]');
+    if(!motionOn){ Array.prototype.forEach.call(els,function(el){ el.style.opacity='1'; }); return; }
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(en.isIntersecting){
+          var el=en.target;
+          var d=parseInt(el.getAttribute('data-reveal-delay')||'0',10);
+          el.style.transition='opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1)';
+          el.style.transitionDelay=d+'ms';
+          el.style.opacity='1'; el.style.transform='none';
+          io.unobserve(el);
+        }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    Array.prototype.forEach.call(els,function(el){ el.style.opacity='0'; el.style.transform='translateY(26px)'; io.observe(el); });
+  };
+
+  var readColors = function(cs){
+    var g=function(n,f){ return (cs.getPropertyValue(n).trim()||f); };
+    return {ink:g('--ink','#16140e'),muted:g('--muted','#6f6b61'),accent:g('--accent','#ff5a36'),accentInk:g('--accent-ink','#ffffff'),bg:g('--bg','#f7f5f0'),blue:g('--blue','#2f6df0'),bg2:g('--bg-2','#efece4'),line:g('--line','#dbd6ca')};
+  };
+
+  // ================= HERO SIM: E/E network + AUTOSAR =================
+  var initSim = function(){
+    var cv=$('heroCanvas'); if(!cv) return;
+    var ctx=cv.getContext('2d');
+    var W=1,H=1,dpr=1, raf;
+    var resize=function(){ var el=$('heroCanvas'); if(!el) return; cv=el; ctx=el.getContext('2d'); dpr=Math.min(2,window.devicePixelRatio||1); var r=el.getBoundingClientRect(); W=Math.max(1,r.width); H=Math.max(1,r.height); el.width=Math.round(W*dpr); el.height=Math.round(H*dpr); ctx.setTransform(dpr,0,0,dpr,0,0); };
+    resize();
+    var ro=new ResizeObserver(function(){ resize(); }); ro.observe(cv);
+
+    var mouse={x:null,y:null};
+    var onMove=function(e){ var el=$('heroCanvas'); if(!el) return; var r=el.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; };
+    var onLeave=function(){ mouse.x=null; mouse.y=null; };
+    var onClick=function(e){ if((HERO_VIZ||'network')!=='network') return; var el=$('heroCanvas'); if(!el) return; var r=el.getBoundingClientRect(); var mx=e.clientX-r.left, my=e.clientY-r.top;
+      if(sel>=0){ if(motionOn){ closing=true; } else { sel=-1; selT=0; closing=false; } }
+      else { var hit=-1,best=1e9; ecus.forEach(function(n,i){ var px=n.fx*W,py=n.fy*H; var d=Math.hypot(px-mx,py-my); if(d<48&&d<best){ best=d; hit=i; } }); if(hit>=0){ sel=hit; selT=motionOn?0:1; closing=false; } }
+      if(raf) cancelAnimationFrame(raf); frame(performance.now()); };
+    var panel=cv.parentElement||cv;
+    panel.addEventListener('mousemove',onMove);
+    panel.addEventListener('mouseleave',onLeave);
+    panel.addEventListener('click',onClick);
+
+    var cs=getComputedStyle(document.documentElement);
+    var colors=readColors(cs); var colTick=0;
+    var mode=HERO_VIZ||'network';
+    var lerp=function(a,b,u){ return a+(b-a)*u; };
+    var NP=function(n){ return {x:n.fx*W,y:n.fy*H}; };
+    var rrect=function(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
+    var gt=0, dt=0, last=performance.now();
+
+    var ecus=[
+      {fx:0.50,fy:0.50, label:'Gateway',   gw:true},
+      {fx:0.17,fy:0.30, label:'BCU',hl:true,bus:'CAN-FD'},
+      {fx:0.17,fy:0.70, label:'Powertrain',bus:'CAN-FD'},
+      {fx:0.83,fy:0.30, label:'ADAS',      bus:'Ethernet'},
+      {fx:0.83,fy:0.70, label:'Chassis',   bus:'CAN'},
+      {fx:0.50,fy:0.135,label:'Cluster',   bus:'Ethernet'},
+      {fx:0.50,fy:0.865,label:'Diag · OBD',bus:'CAN'}
+    ];
+    var packets=[]; var pSpawn=0, frames=6100+Math.floor(Math.random()*200), busLoad=42;
+
+    var layers=[
+      {label:'Application Layer',y:0.12,h:0.27},
+      {label:'RTE',y:0.42,h:0.10},
+      {label:'Basic Software (BSW)',y:0.545,h:0.165},
+      {label:'MCAL',y:0.73,h:0.10},
+      {label:'Microcontroller',y:0.85,h:0.10}
+    ];
+    var swcs=['Light Mgr','Door Lock','Wiper Ctrl','GW Router','Diag Mgr'];
+    var signals=[]; var sSpawn=0, sigCount=4200+Math.floor(Math.random()*150);
+
+    var sel=-1, selT=0, closing=false;
+    var ease=function(t){ return 1-Math.pow(1-t,3); };
+    var stacks=[
+      {kind:'Classic AUTOSAR',sub:'CAN ↔ CAN-FD ↔ Ethernet routing',apps:['PduR','Diag · Dcm','SecOC','Net Mgmt'],layers:['Application','RTE','BSW · PduR / CanTp','MCAL','Microcontroller']},
+      {kind:'Classic AUTOSAR',sub:'Body domain · comfort & lighting',apps:['Lighting','Central Lock','Wipers','Windows'],layers:['Application','RTE','BSW · COM / Dcm','MCAL','Microcontroller']},
+      {kind:'Classic AUTOSAR',sub:'Powertrain / e-motor control',apps:['Torque Ctrl','Energy Mgmt','Thermal','OBD Monitors'],layers:['Application','RTE','BSW · COM / Dem','MCAL','Microcontroller']},
+      {kind:'Adaptive AUTOSAR',sub:'High-performance compute',apps:['Perception','Sensor Fusion','Path Planning','Control'],layers:['Adaptive Apps','ARA · Runtime','POSIX OS (Linux)','High-perf SoC']},
+      {kind:'Classic AUTOSAR',sub:'Chassis · vehicle dynamics',apps:['ESC','ABS','EPS Steering','Damping'],layers:['Application','RTE','BSW · COM / Dem','MCAL','Microcontroller']},
+      {kind:'Adaptive AUTOSAR',sub:'HMI · instrument cluster',apps:['HMI Render','Telltales','Navigation','Connectivity'],layers:['Adaptive Apps','ARA · Runtime','POSIX OS','SoC + GPU']},
+      {kind:'Diagnostics',sub:'UDS · DoIP service stack',apps:['UDS','DoIP','DTC Mgmt','Flashing'],layers:['Diagnostic Apps','RTE','BSW · Dcm / Dem','MCAL','Microcontroller']}
+    ];
+
+    if(mode==='autosar'){ setTxt('simLabel','autosar.stack.live'); setTxt('simHint','hover a layer →'); setTxt('hudL1','SIGNALS'); setTxt('hudL2','SWCs'); setTxt('hudL3','VIA RTE'); }
+    else { setTxt('simLabel','e-e.network.live'); setTxt('simHint','click an ECU to expand'); setTxt('hudL1','FRAMES'); setTxt('hudL2','BUS LOAD'); setTxt('hudL3','ACTIVE'); }
+    var chromeTop = $('simLabel') ? $('simLabel').parentElement : null;
+    var chromeBot = ($('hudL1') && $('hudL1').parentElement) ? $('hudL1').parentElement.parentElement : null;
+
+    var drawNet=function(c){
+      var gw=NP(ecus[0]); var hv=-1;
+      if(mouse.x!=null && sel<0){ var best=1e9; ecus.forEach(function(n,i){ var p=NP(n); var d=Math.hypot(p.x-mouse.x,p.y-mouse.y); if(d<48&&d<best){ best=d; hv=i; } }); }
+      if($('heroCanvas')) $('heroCanvas').style.cursor=(hv>=0||sel>=0)?'pointer':'default';
+      for(var i=1;i<ecus.length;i++){ var p=NP(ecus[i]); var on=hv===i; ctx.beginPath(); ctx.moveTo(gw.x,gw.y); ctx.lineTo(p.x,p.y); ctx.globalAlpha=on?0.85:0.3; ctx.lineWidth=on?2.4:1.4; ctx.strokeStyle=on?c.accent:c.muted; ctx.stroke(); ctx.globalAlpha=1;
+        if(on){ var mx=lerp(gw.x,p.x,0.5),my=lerp(gw.y,p.y,0.5); ctx.font='10px "IBM Plex Mono",monospace'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillStyle=c.accent; ctx.fillText(ecus[i].bus,mx,my-8); }
+      }
+      if(motionOn){ pSpawn+=dt; if(pSpawn>0.5){ pSpawn=0; var src=1+Math.floor(Math.random()*(ecus.length-1)); var dst=1+Math.floor(Math.random()*(ecus.length-1)); if(dst===src) dst=dst%(ecus.length-1)+1; packets.push({src:src,dst:dst,p:0,sp:0.7+Math.random()*0.5}); }
+        if(hv>0 && packets.length<44 && Math.random()<dt*3){ var d2=1+Math.floor(Math.random()*(ecus.length-1)); if(d2===hv) d2=d2%(ecus.length-1)+1; packets.push({src:hv,dst:d2,p:0,sp:1.0}); } }
+      var keep=[]; var active=0;
+      packets.forEach(function(pk){ if(motionOn) pk.p+=dt*pk.sp; var pos; if(pk.p<1){ var a=NP(ecus[pk.src]); pos={x:lerp(a.x,gw.x,pk.p),y:lerp(a.y,gw.y,pk.p)}; } else if(pk.p<2){ var b=NP(ecus[pk.dst]); pos={x:lerp(gw.x,b.x,pk.p-1),y:lerp(gw.y,b.y,pk.p-1)}; } else { frames++; return; } active++; ctx.globalAlpha=0.22; ctx.fillStyle=c.accent; rrect(pos.x-5,pos.y-5,10,10,2); ctx.fill(); ctx.globalAlpha=1; ctx.fillStyle=c.accent; rrect(pos.x-2.5,pos.y-2.5,5,5,1); ctx.fill(); keep.push(pk); });
+      packets=keep;
+      busLoad+=((34+active*3)-busLoad)*Math.min(1,dt*2);
+      ecus.forEach(function(n,i){ var p=NP(n); var on=hv===i; var w=n.gw?Math.max(78,W*0.155):Math.max(60,W*0.125); var h=n.gw?42:32; var acc=on||n.gw||n.hl;
+        if(on){ ctx.globalAlpha=0.16; ctx.fillStyle=c.accent; rrect(p.x-w/2-6,p.y-h/2-6,w+12,h+12,11); ctx.fill(); ctx.globalAlpha=1; }
+        ctx.fillStyle=c.bg2; rrect(p.x-w/2,p.y-h/2,w,h,8); ctx.fill();
+        ctx.lineWidth=n.gw?2.4:(n.hl?2:1.5); ctx.globalAlpha=acc?1:0.7; ctx.strokeStyle=acc?c.accent:c.muted; rrect(p.x-w/2,p.y-h/2,w,h,8); ctx.stroke(); ctx.globalAlpha=1;
+        ctx.font=(n.gw?'600 12px':'11px')+' "IBM Plex Mono",monospace'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillStyle=acc?c.ink:c.muted; ctx.fillText(n.label,p.x,p.y);
+      });
+      setTxt('hudSpd',String(frames));
+      setTxt('hudHdg',Math.round(busLoad)+'%');
+      var hd=$('hudDist'); if(hd){ hd.textContent=String(active); hd.style.color=active?c.accent:c.muted; }
+      if(sel>=0 && !closing) selT=Math.min(1,selT+dt*3.4);
+      if(closing){ selT=Math.max(0,selT-dt*3.4); if(selT<=0){ sel=-1; closing=false; } }
+      var fade=Math.max(0,1-selT*1.5).toString();
+      if(chromeTop) chromeTop.style.opacity=fade;
+      if(chromeBot) chromeBot.style.opacity=fade;
+      if(selT>0 && sel>=0) drawDetail(c,sel,selT);
+    };
+
+    var drawDetail=function(c,idx,k){
+      var e=ease(k); var st=stacks[idx], node=ecus[idx];
+      ctx.globalAlpha=0.86*e; ctx.fillStyle=c.bg; ctx.fillRect(0,0,W,H); ctx.globalAlpha=1;
+      var s=0.93+0.07*e;
+      ctx.save(); ctx.globalAlpha=e; ctx.translate(W/2,H/2); ctx.scale(s,s); ctx.translate(-W/2,-H/2);
+      var m=Math.min(W,H)*0.045, x0=m, y0=m, cardW=W-2*m, cardH=H-2*m, p=18;
+      ctx.fillStyle=c.bg2; rrect(x0,y0,cardW,cardH,14); ctx.fill();
+      ctx.globalAlpha=e*0.9; ctx.lineWidth=1.5; ctx.strokeStyle=c.accent; rrect(x0,y0,cardW,cardH,14); ctx.stroke(); ctx.globalAlpha=e;
+      ctx.textAlign='left'; ctx.textBaseline='top';
+      ctx.fillStyle=c.ink; ctx.font='600 18px "IBM Plex Mono",monospace'; ctx.fillText(node.label.replace(' · ',' '),x0+p,y0+p);
+      ctx.font='10px "IBM Plex Mono",monospace';
+      var kindTxt=st.kind.toUpperCase(), kw=ctx.measureText(kindTxt).width+16;
+      ctx.fillStyle=c.accent; rrect(x0+p,y0+p+26,kw,18,9); ctx.fill();
+      ctx.fillStyle=c.accentInk; ctx.fillText(kindTxt,x0+p+8,y0+p+30);
+      ctx.fillStyle=c.muted; ctx.font='11px "IBM Plex Mono",monospace'; ctx.fillText(st.sub,x0+p+kw+10,y0+p+30);
+      ctx.textAlign='right'; ctx.fillStyle=c.muted; ctx.fillText('✕ click to go back',x0+cardW-p,y0+p+4); ctx.textAlign='left';
+      var chipX=x0+p; var chipY=y0+p+58; ctx.font='11px "IBM Plex Mono",monospace';
+      st.apps.forEach(function(ap){ var w=ctx.measureText(ap).width+18; ctx.globalAlpha=e*0.85; ctx.lineWidth=1; ctx.strokeStyle=c.muted; rrect(chipX,chipY,w,24,7); ctx.stroke(); ctx.globalAlpha=e; ctx.fillStyle=c.ink; ctx.textBaseline='middle'; ctx.fillText(ap,chipX+9,chipY+13); ctx.textBaseline='top'; chipX+=w+8; });
+      var bandsTop=chipY+40, bandsBot=y0+cardH-p, nL=st.layers.length, gap=8, bh=(bandsBot-bandsTop-gap*(nL-1))/nL;
+      st.layers.forEach(function(L,i){ var by=bandsTop+i*(bh+gap), isRT=i===1;
+        ctx.globalAlpha=e*(isRT?0.16:0.06); ctx.fillStyle=isRT?c.accent:c.muted; rrect(x0+p,by,cardW-2*p,bh,7); ctx.fill();
+        ctx.globalAlpha=e*(isRT?0.9:0.5); ctx.lineWidth=isRT?2:1; ctx.strokeStyle=isRT?c.accent:c.line; rrect(x0+p,by,cardW-2*p,bh,7); ctx.stroke(); ctx.globalAlpha=e;
+        ctx.fillStyle=isRT?c.accent:c.muted; ctx.font='10px "IBM Plex Mono",monospace'; ctx.textBaseline='middle'; ctx.fillText(L.toUpperCase(),x0+p+12,by+bh/2); ctx.textBaseline='top';
+        if(isRT){ var ph=((gt*0.28+idx*0.2)%1), dx=x0+p+14+(cardW-2*p-28)*ph; ctx.beginPath(); ctx.arc(dx,by+bh/2,3.2,0,7); ctx.fillStyle=c.accent; ctx.fill(); }
+      });
+      ctx.restore();
+    };
+
+    var drawAutosar=function(c){
+      var pad=W*0.07; var hv=-1; if(mouse.x!=null){ layers.forEach(function(L,i){ if(mouse.y>=L.y*H && mouse.y<=(L.y+L.h)*H) hv=i; }); }
+      var Yc=function(L){ return (L.y+L.h/2)*H; };
+      layers.forEach(function(L,i){ var on=hv===i; var rte=L.label==='RTE'; ctx.globalAlpha=on?0.14:(rte?0.11:0.05); ctx.fillStyle=(rte||on)?c.accent:c.muted; rrect(pad,L.y*H,W-2*pad,L.h*H,8); ctx.fill(); ctx.globalAlpha=(rte||on)?0.9:0.45; ctx.lineWidth=rte?2:1.2; ctx.strokeStyle=(rte||on)?c.accent:c.line; rrect(pad,L.y*H,W-2*pad,L.h*H,8); ctx.stroke(); ctx.globalAlpha=1; ctx.font='10px "IBM Plex Mono",monospace'; ctx.textAlign='left'; ctx.textBaseline='top'; ctx.fillStyle=(rte||on)?c.accent:c.muted; ctx.fillText(L.label.toUpperCase(),pad+10,L.y*H+8); });
+      var appL=layers[0]; var n=swcs.length; var gapW=W-2*pad; var bw=gapW/n*0.76; var swcY=(appL.y+appL.h*0.58)*H; var swcH=appL.h*H*0.46;
+      var swcX=function(i){ return pad+gapW*((i+0.5)/n); };
+      var rteY=Yc(layers[1]);
+      swcs.forEach(function(sname,i){ var x=swcX(i); ctx.fillStyle=c.bg2; rrect(x-bw/2,swcY-swcH/2,bw,swcH,6); ctx.fill(); ctx.lineWidth=1.5; ctx.globalAlpha=0.85; ctx.strokeStyle=c.muted; rrect(x-bw/2,swcY-swcH/2,bw,swcH,6); ctx.stroke(); ctx.globalAlpha=1; ctx.font='10px "IBM Plex Mono",monospace'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillStyle=c.ink; ctx.fillText(sname,x,swcY); });
+      if(motionOn){ sSpawn+=dt; if(sSpawn>0.6){ sSpawn=0; var a=Math.floor(Math.random()*n), b=Math.floor(Math.random()*n); if(b===a) b=(b+1)%n; signals.push({a:a,b:b,p:0,sp:0.6+Math.random()*0.4}); } }
+      var keep=[]; var viaR=0;
+      signals.forEach(function(sg){ if(motionOn) sg.p+=dt*sg.sp; var ax=swcX(sg.a), bx=swcX(sg.b); var downLen=Math.abs(rteY-swcY), acrossLen=Math.max(1,Math.abs(bx-ax)); var tot=downLen+acrossLen+downLen; var s1=downLen/tot, s2=acrossLen/tot; var p=sg.p; if(p>=1){ sigCount++; return; } var pos; if(p<s1){ pos={x:ax,y:lerp(swcY,rteY,p/s1)}; } else if(p<s1+s2){ pos={x:lerp(ax,bx,(p-s1)/s2),y:rteY}; viaR++; } else { pos={x:bx,y:lerp(rteY,swcY,(p-s1-s2)/(1-s1-s2))}; } ctx.globalAlpha=0.22; ctx.fillStyle=c.accent; ctx.beginPath(); ctx.arc(pos.x,pos.y,7,0,7); ctx.fill(); ctx.globalAlpha=1; ctx.beginPath(); ctx.arc(pos.x,pos.y,3.2,0,7); ctx.fillStyle=c.accent; ctx.fill(); keep.push(sg); });
+      signals=keep;
+      setTxt('hudSpd',String(sigCount)); setTxt('hudHdg',String(n));
+      var hd=$('hudDist'); if(hd){ hd.textContent=String(viaR); hd.style.color=viaR?c.accent:c.muted; }
+    };
+
+    function frame(now){
+      dt=Math.min(0.05,(now-last)/1000); last=now;
+      if(motionOn) gt+=dt;
+      var live=$('heroCanvas');
+      if(live && live!==cv){ ro.disconnect(); ro.observe(live); resize(); }
+      else if(live){ var rb=live.getBoundingClientRect(); if(rb.width>1 && (Math.abs(rb.width-W)>0.5||Math.abs(rb.height-H)>0.5)) resize(); }
+      if((colTick++ %20)===0) colors=readColors(cs);
+      var c=colors;
+      ctx.clearRect(0,0,W,H);
+      var gs=Math.max(30,Math.min(W,H)/9);
+      ctx.globalAlpha=0.4; ctx.strokeStyle=c.line; ctx.lineWidth=1;
+      for(var x=(W/2)%gs;x<W;x+=gs){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+      for(var y=(H/2)%gs;y<H;y+=gs){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+      ctx.globalAlpha=1;
+      if(mode==='autosar') drawAutosar(c); else drawNet(c);
+      raf=requestAnimationFrame(frame);
+    }
+    frame(performance.now());
+  };
+
+  // ================= EXPERIENCE SIM: quintic lane change =================
+  var initHwy=function(){
+    var cv=$('hwyCanvas'); if(!cv) return;
+    var ctx=cv.getContext('2d'); var W=1,H=1,dpr=1, raf2;
+    var resize=function(){ var el=$('hwyCanvas'); if(!el) return; cv=el; ctx=el.getContext('2d'); dpr=Math.min(2,window.devicePixelRatio||1); var r=el.getBoundingClientRect(); W=Math.max(1,r.width); H=Math.max(1,r.height); el.width=Math.round(W*dpr); el.height=Math.round(H*dpr); ctx.setTransform(dpr,0,0,dpr,0,0); };
+    resize();
+    var ro2=new ResizeObserver(function(){ resize(); }); ro2.observe(cv);
+    var mouse={x:null};
+    var panel=cv.parentElement||cv;
+    var onMove=function(e){ var el=$('hwyCanvas'); if(!el) return; var r=el.getBoundingClientRect(); mouse.x=(e.clientX-r.left)/Math.max(1,r.width); };
+    var onLeave=function(){ mouse.x=null; };
+    panel.addEventListener('mousemove',onMove); panel.addEventListener('mouseleave',onLeave);
+    var cs=getComputedStyle(document.documentElement); var colors=readColors(cs); var ct=0;
+    var S=function(t){ return t<=0?0:t>=1?1:t*t*t*(t*(t*6-15)+10); };
+    var rr=function(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
+    var ex=0, dash=0, last=performance.now();
+    var onc=[{x:0.22,l:-1.5},{x:0.60,l:-0.5},{x:0.92,l:-1.5}];
+    var nbr=[{x:0.78,l:0.5}];
+    function frame(now){
+      var dt=Math.min(0.05,(now-last)/1000); last=now;
+      var live=$('hwyCanvas');
+      if(live && live!==cv){ ro2.disconnect(); ro2.observe(live); resize(); }
+      else if(live){ var r2=live.getBoundingClientRect(); if(r2.width>1 && (Math.abs(r2.width-W)>0.5||Math.abs(r2.height-H)>0.5)) resize(); }
+      if((ct++ %20)===0) colors=readColors(cs);
+      var c=colors;
+      if(motionOn){ ex+=dt*0.15; if(ex>1) ex-=1; dash-=dt*70; }
+      ctx.clearRect(0,0,W,H);
+      var laneH=Math.min(38,H*0.135), amp=H*0.05, baseY=H*0.5;
+      var rc=function(x){ return baseY+amp*Math.sin((x*1.3-0.15)*Math.PI); };
+      var yOf=function(x,l){ return rc(x)+l*laneH; };
+      var tan=function(x,l){ var x2=Math.min(1,x+0.01); return Math.atan2(yOf(x2,l)-yOf(x,l),(x2-x)*W); };
+      ctx.beginPath();
+      for(var i=0;i<=120;i++){ var x=i/120; var yy=rc(x)-2*laneH; i?ctx.lineTo(x*W,yy):ctx.moveTo(x*W,yy); }
+      for(var j=120;j>=0;j--){ var xj=j/120; ctx.lineTo(xj*W,rc(xj)+2*laneH); }
+      ctx.closePath(); ctx.fillStyle=c.bg2; ctx.fill();
+      var lineAt=function(l,a,w,dashArr,col){ ctx.beginPath(); for(var i=0;i<=120;i++){ var x=i/120; i?ctx.lineTo(x*W,yOf(x,l)):ctx.moveTo(x*W,yOf(x,l)); } ctx.globalAlpha=a; ctx.strokeStyle=col||c.muted; ctx.lineWidth=w; if(dashArr){ ctx.setLineDash(dashArr); ctx.lineDashOffset=dash; } ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1; };
+      lineAt(-2,0.5,2); lineAt(2,0.5,2);
+      lineAt(-1,0.4,1.5,[16,14]); lineAt(1,0.4,1.5,[16,14]);
+      lineAt(-0.06,0.55,2); lineAt(0.06,0.55,2);
+      var car=function(x,l,dir,fill,strip){ var px=x*W,py=yOf(x,l); var ang=tan(x,l); if(dir<0) ang+=Math.PI; ctx.save(); ctx.translate(px,py); ctx.rotate(ang); var cw=Math.max(26,W*0.058),ch=laneH*0.54; ctx.fillStyle=fill; rr(-cw/2,-ch/2,cw,ch,5); ctx.fill(); if(strip){ ctx.fillStyle=strip; rr(cw/2-5,-ch/2,5,ch,2); ctx.fill(); } ctx.restore(); };
+      if(motionOn){ onc.forEach(function(o){ o.x-=dt*0.13; if(o.x<-0.12) o.x=1.12; }); nbr.forEach(function(o){ o.x+=dt*0.10; if(o.x>1.12) o.x=-0.12; }); }
+      onc.forEach(function(o){ car(o.x,o.l,-1,c.muted,null); });
+      nbr.forEach(function(o){ car(o.x,o.l,1,c.muted,null); });
+      var obsX=mouse.x!=null?Math.min(0.82,Math.max(0.22,mouse.x)):0.56;
+      var oyp=yOf(obsX,1.5), ow=Math.max(26,W*0.055), oh=laneH*0.5;
+      ctx.globalAlpha=0.14; ctx.fillStyle=c.accent; ctx.beginPath(); ctx.arc(obsX*W,oyp,oh*1.7,0,7); ctx.fill(); ctx.globalAlpha=1;
+      ctx.save(); ctx.translate(obsX*W,oyp); ctx.rotate(tan(obsX,1.5)); ctx.fillStyle=c.accent; rr(-ow/2,-oh/2,ow,oh,4); ctx.fill(); ctx.restore();
+      var a=obsX-0.24, b=obsX-0.07, cc=obsX+0.07, d=obsX+0.24;
+      var sh=function(x){ if(x<a) return 0; if(x<b) return -S((x-a)/(b-a)); if(x<cc) return -1; if(x<d) return -(1-S((x-cc)/(d-cc))); return 0; };
+      var egoL=function(x){ return 1.5+sh(x); };
+      ctx.beginPath(); for(var k=0;k<=120;k++){ var xk=k/120; var yk=yOf(xk,egoL(xk)); k?ctx.lineTo(xk*W,yk):ctx.moveTo(xk*W,yk); }
+      ctx.setLineDash([6,7]); ctx.lineWidth=2; ctx.globalAlpha=0.8; ctx.strokeStyle=c.accent; ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1;
+      var xe=ex, px=xe*W, py=yOf(xe,egoL(xe));
+      var x2=Math.min(1,xe+0.012), ang=Math.atan2(yOf(x2,egoL(x2))-py,(x2-xe)*W);
+      ctx.save(); ctx.translate(px,py); ctx.rotate(ang);
+      var cw=Math.max(40,W*0.085), ch=laneH*0.64;
+      ctx.globalAlpha=0.16; ctx.fillStyle=c.accent; ctx.beginPath(); ctx.ellipse(0,0,cw*0.82,ch*1.25,0,0,7); ctx.fill(); ctx.globalAlpha=1;
+      ctx.fillStyle=c.ink; rr(-cw/2,-ch/2,cw,ch,6); ctx.fill();
+      ctx.fillStyle=c.accent; rr(cw/2-9,-ch/2,9,ch,3); ctx.fill();
+      ctx.globalAlpha=0.85; ctx.fillStyle=c.bg2; rr(-cw/2+5,-ch/2+3,cw*0.32,ch-6,3); ctx.fill(); ctx.globalAlpha=1;
+      ctx.restore();
+      var off=sh(xe);
+      var latEl=$('hwyLat'); if(latEl) latEl.textContent=(-off*3.7).toFixed(1);
+      var stEl=$('hwyState'); if(stEl) stEl.textContent=Math.abs(off)<0.04?'lane keep':(xe<obsX?'avoiding':'returning');
+      raf2=requestAnimationFrame(frame);
+    }
+    frame(performance.now());
+  };
+
+  // ================= PHOTOGRAPHY: live Unsplash pull =================
+  var initGallery=function(){
+    var grid=$('galleryGrid'); if(!grid || !UNSPLASH_KEY) return;
+    var url='https://api.unsplash.com/users/'+UNSPLASH_USER+'/photos?per_page=8&order_by=downloads&client_id='+UNSPLASH_KEY;
+    fetch(url).then(function(r){ if(!r.ok) throw new Error('unsplash '+r.status); return r.json(); })
+      .then(function(list){
+        if(!Array.isArray(list) || !list.length) return; // keep placeholders
+        grid.innerHTML='';
+        list.slice(0,8).forEach(function(ph){
+          var a=document.createElement('a');
+          a.href=(ph.links && ph.links.html ? ph.links.html : 'https://unsplash.com/@'+UNSPLASH_USER)+'?utm_source=panostsilivis&utm_medium=referral';
+          a.target='_blank'; a.rel='noopener';
+          a.className='proj-card';
+          a.style.cssText='display:block;width:100%;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg);';
+          var img=document.createElement('img');
+          img.src=(ph.urls && (ph.urls.small||ph.urls.regular))||'';
+          img.alt=ph.alt_description||('Photo by Panos Tsilivis on Unsplash');
+          img.loading='lazy';
+          img.style.cssText='width:100%;height:100%;object-fit:cover;display:block;';
+          a.appendChild(img); grid.appendChild(a);
+        });
+      })
+      .catch(function(){ /* network/key error -> placeholders remain */ });
+  };
+
+  var start=function(){ initReveal(); initSim(); initHwy(); initGallery(); };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
 </body>
 </html>
