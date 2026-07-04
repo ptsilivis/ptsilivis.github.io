@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutonomousGuy — AUTOSAR, MISRA C &amp; ISO 26262 AI Skills</title>
+<meta name="description" content="Open-source AUTOSAR AI skills for embedded automotive: MISRA C AI assistant, ISO 26262 AI, BSW/RTE, Classic &amp; Adaptive. Works with Claude Code, Copilot, Cursor.">
+<link rel="canonical" href="https://panostsilivis.com/autonomousguy/">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f7f5f0}
+:root{--bg:#f7f5f0;--bg-2:#efece4;--bg-3:#e6e1d5;--ink:#16140e;--muted:#6f6b61;--line:#dbd6ca;--accent:#ff5a36;--accent-ink:#ffffff}
+:root[data-theme="dark"]{--bg:#0b0b0d;--bg-2:#131318;--bg-3:#1c1c22;--ink:#f2f0ea;--muted:#908d85;--line:#272730;--accent:#ff6a48;--accent-ink:#0b0b0d}
+@keyframes pt-blink{0%,55%{opacity:1}80%,100%{opacity:.12}}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important}}
+a{color:inherit}
+:root{--ease-out:cubic-bezier(.23,1,.32,1)}
+.nav-link{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s ease}
+.btn-accent{transition:transform .16s var(--ease-out),box-shadow .2s ease}
+.btn-ghost{transition:transform .16s var(--ease-out),border-color .2s ease}
+.card-lift{transition:transform .25s var(--ease-out),border-color .25s ease,box-shadow .25s ease}
+.theme-btn{transition:transform .16s var(--ease-out),border-color .2s ease}
+.btn-accent:active{transform:translateY(-1px) scale(.97)}
+.btn-ghost:active{transform:translateY(-1px) scale(.97)}
+.theme-btn:active{transform:scale(.95)}
+@media (hover:hover) and (pointer:fine){
+  .nav-link:hover{color:var(--ink)}
+  .btn-accent:hover{transform:translateY(-2px)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .card-lift:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .theme-btn:hover{border-color:var(--accent)}
+}
+code,pre{font-family:'IBM Plex Mono',monospace}
+pre{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.6;overflow-x:auto;margin:0}
+.chip{font-size:14px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;display:inline-block}
+</style>
+</head>
+<body>
+<div style="background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;min-height:100vh;overflow-x:clip;transition:background .4s ease,color .4s ease;">
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,48px);backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line);">
+    <a href="/" style="text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;">
+      <span style="display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-size:13px;">PT</span>
+      <span style="font-size:15px;">Panos Tsilivis</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="/" class="nav-link">← Home</a>
+      <button type="button" id="themeBtn" class="theme-btn" style="cursor:pointer;display:flex;align-items:center;gap:8px;background:var(--bg-2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:7px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></span><span id="themeLabel">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header style="max-width:960px;margin:0 auto;padding:clamp(120px,15vw,170px) clamp(20px,4vw,48px) 24px;">
+    <div data-reveal style="display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:28px;">
+      <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pt-blink 1.6s infinite;"></span>
+      Open source · MIT · npm
+    </div>
+    <h1 data-reveal style="font-size:clamp(40px,7.4vw,76px);line-height:1;letter-spacing:-.035em;font-weight:700;margin:0 0 20px;">AutonomousGuy<br><span style="color:var(--accent);">AUTOSAR AI skills</span> for coding agents</h1>
+    <p data-reveal style="font-size:clamp(17px,2vw,20px);line-height:1.6;color:var(--muted);max-width:56ch;margin:0 0 28px;">Open-source AI agent skills for embedded automotive engineers — AUTOSAR (Classic &amp; Adaptive), MISRA C and ISO 26262 — that give Claude Code, GitHub Copilot and Cursor the domain context they are missing.</p>
+    <div data-reveal style="margin:0 0 22px;max-width:640px;">
+      <pre><code>npx skills add ptsilivis/autonomousguy -g</code></pre>
+    </div>
+    <div data-reveal style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="https://github.com/ptsilivis/autonomousguy" target="_blank" rel="noopener" class="btn-accent" style="text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;box-shadow:0 6px 20px -8px var(--accent);">GitHub repo</a>
+      <a href="https://skills.sh/ptsilivis/autonomousguy" target="_blank" rel="noopener" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;border:1px solid var(--line);">View on skills.sh</a>
+      <a href="https://www.npmjs.com/package/autonomousguy" target="_blank" rel="noopener" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;border:1px solid var(--line);">npm</a>
+    </div>
+  </header>
+
+  <!-- WHY -->
+  <section style="max-width:960px;margin:0 auto;padding:clamp(50px,7vw,90px) clamp(20px,4vw,48px);">
+    <h2 data-reveal style="font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.03em;margin:0 0 18px;">Why an AI assistant needs automotive context</h2>
+    <p data-reveal style="font-size:17px;line-height:1.7;color:var(--muted);max-width:66ch;margin:0 0 14px;">Embedded automotive work carries heavy domain context — AUTOSAR layering, MISRA C rules, ISO 26262 ASIL logic — that general AI tools do not know. Without it you re-explain the same background on every prompt.</p>
+    <p data-reveal style="font-size:17px;line-height:1.7;color:var(--muted);max-width:66ch;margin:0;">AutonomousGuy encodes that context once, as Agent Skills. The result: a MISRA C AI assistant, an ISO 26262 AI workflow and an AUTOSAR Classic / Adaptive AI agent inside the coding tool you already use — giving consistent, expert-level answers without the re-explaining.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div style="max-width:1120px;margin:0 auto;padding:clamp(60px,8vw,100px) clamp(20px,4vw,48px);">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.03em;margin:0;">10 skills across the ECU software lifecycle</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">Mode-aware · Classic + Adaptive</span>
+      </div>
+      <p data-reveal style="font-size:16px;line-height:1.7;color:var(--muted);max-width:70ch;margin:0 0 36px;">Each skill routes from your input to the right sub-workflow, so one skill handles several related tasks. Start with <code>codebase-analysis</code>: it writes a codebase map the other skills reference. Skills default to Classic AUTOSAR and switch to Adaptive when your input names AP concepts (ara::com, ara::exec, POSIX, service-oriented).</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;">
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">codebase-analysis</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Scans the repo and maps SWCs, BSW usage, port interfaces, RTE API calls, signal flow and ASIL zones into a codebase map.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">autosar-swc</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Component design, port interface definition, SWC code, plain-text diagrams and integration review.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">autosar-bsw</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">BSW config (Com, NvM, Dem, Dcm, Os, MemIf), ARXML debugging, RTE generation troubleshooting and CAN COM-stack debugging.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">misra</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Audit C against MISRA C:2025 or write code that is compliant by construction.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">code-review</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Embedded C correctness review — ISR safety, integer overflow, races, stack — plus AUTOSAR naming-convention audit.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">requirements</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Elicit, refine and trace requirements in EARS notation with ASIL attributes.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">iso26262</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Run a HARA to assign ASIL, or derive Safety Goals and Functional Safety Requirements with FTTI.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">embedded-testing</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Generate MC/DC-covering unit tests and systematic boundary-value test points.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">embedded-debugging</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Triage a field problem report or debug a specific fault — HardFault, watchdog, Dem event, stack overflow.</p>
+        </div>
+        <div data-reveal class="card-lift" style="border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:8px;">change-and-impact</div>
+          <p style="font-size:14.5px;line-height:1.6;color:var(--muted);margin:0;">Analyze a change request before work begins, or trace ripple effects with a regression scope.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALL + AGENTS -->
+  <section style="max-width:960px;margin:0 auto;padding:clamp(60px,8vw,100px) clamp(20px,4vw,48px);">
+    <h2 data-reveal style="font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.03em;margin:0 0 18px;">Install — Claude Code skills for embedded automotive, in one command</h2>
+    <div data-reveal style="max-width:640px;margin:0 0 26px;">
+      <pre><code># Install all skills (global)
+npx skills add ptsilivis/autonomousguy -g
+
+# Browse what's inside before installing
+npx skills add ptsilivis/autonomousguy --list
+
+# Install one skill / target a specific agent
+npx skills add ptsilivis/autonomousguy --skill autosar-bsw
+npx skills add ptsilivis/autonomousguy -a claude-code</code></pre>
+    </div>
+    <h3 data-reveal style="font-size:18px;font-weight:600;letter-spacing:-.01em;margin:0 0 14px;">Supported agents</h3>
+    <div data-reveal style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px;">
+      <span class="chip">Claude Code</span>
+      <span class="chip">GitHub Copilot</span>
+      <span class="chip">Cursor</span>
+      <span class="chip">Codex</span>
+      <span class="chip">Gemini CLI</span>
+      <span class="chip">opencode</span>
+      <span class="chip">Any Agent Skills tool</span>
+    </div>
+    <p data-reveal style="font-size:15px;line-height:1.7;color:var(--muted);max-width:66ch;margin:0;">Requires Node.js ≥18. Domain coverage: AUTOSAR Classic (CP) and Adaptive (AP), BSW, MCAL, RTE, AUTOSAR OS, ara::com, SOA, MISRA C, ISO 26262, ASIL, functional safety, ECU, CAN. The skills cite MISRA / ISO clause identifiers and paraphrase intent — using them on a real project still requires licensed copies of the standards.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <section style="background:var(--bg-2);border-top:1px solid var(--line);">
+    <div style="max-width:960px;margin:0 auto;padding:clamp(50px,7vw,80px) clamp(20px,4vw,48px);">
+      <div data-reveal style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <a href="https://github.com/ptsilivis/autonomousguy" target="_blank" rel="noopener" class="btn-accent" style="text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;box-shadow:0 10px 30px -12px var(--accent);">Star on GitHub</a>
+        <a href="/" class="btn-ghost" style="text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;border:1px solid var(--line);">About the author</a>
+      </div>
+      <div style="margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.04em;">
+        <span>© <span id="year"></span> Panos Tsilivis · MIT</span>
+        <span>panostsilivis.com/autonomousguy</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var theme='light';
+  try{ theme = localStorage.getItem('pt-theme') || 'light'; }catch(e){}
+  document.documentElement.setAttribute('data-theme', theme);
+  var lbl=document.getElementById('themeLabel');
+  var setLbl=function(){ if(lbl) lbl.textContent = theme==='dark'?'Light':'Dark'; };
+  setLbl();
+  var btn=document.getElementById('themeBtn');
+  if(btn) btn.addEventListener('click', function(){
+    theme = theme==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    try{ localStorage.setItem('pt-theme', theme); }catch(e){}
+    setLbl();
+  });
+  var y=document.getElementById('year'); if(y) y.textContent=String(new Date().getFullYear());
+  var els=document.querySelectorAll('[data-reveal]');
+  if(reduce){ Array.prototype.forEach.call(els,function(el){ el.style.opacity='1'; }); return; }
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(en){
+      if(en.isIntersecting){
+        var el=en.target;
+        el.style.transition='opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1)';
+        el.style.opacity='1'; el.style.transform='none';
+        io.unobserve(el);
+      }
+    });
+  },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+  Array.prototype.forEach.call(els,function(el){ el.style.opacity='0'; el.style.transform='translateY(22px)'; io.observe(el); });
+})();
+</script>
+</body>
+</html>
