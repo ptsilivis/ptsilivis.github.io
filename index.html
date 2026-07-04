@@ -58,6 +58,8 @@ a{color:inherit}
 .nav-desktop{display:flex}
 .nav-mobile{display:none}
 @media(max-width:860px){.nav-desktop{display:none}.nav-mobile{display:flex}}
+/* sticky planner: desktop only — on mobile the stacked layout overlaps text */
+@media(min-width:861px){.exp-sticky{position:sticky;top:92px}}
 </style>
 </head>
 <body>
@@ -105,7 +107,7 @@ a{color:inherit}
   <!-- HERO -->
   <header id="top" style="max-width:1280px;margin:0 auto;padding:clamp(120px,15vw,170px) clamp(20px,4vw,48px) 40px;">
     <div style="display:flex;gap:clamp(32px,5vw,64px);flex-wrap:wrap;align-items:center;">
-      <div data-reveal style="flex:1 1 420px;min-width:300px;">
+      <div data-reveal style="flex:1 1 420px;min-width:min(300px,100%);">
         <div style="display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:28px;">
           <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pt-blink 1.6s infinite;"></span>
           Software Technical Project Leader · Regensburg, DE
@@ -119,7 +121,7 @@ a{color:inherit}
         <div style="margin-top:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.04em;">C++ · AUTOSAR · ASPICE · ISO 26262</div>
       </div>
 
-      <div data-reveal data-reveal-delay="120" style="position:relative;flex:1 1 400px;min-width:300px;height:clamp(360px,42vw,520px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-2);box-shadow:0 24px 60px -32px rgba(0,0,0,.4);">
+      <div data-reveal data-reveal-delay="120" style="position:relative;flex:1 1 400px;min-width:min(300px,100%);height:clamp(360px,42vw,520px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-2);box-shadow:0 24px 60px -32px rgba(0,0,0,.4);">
         <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
         <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;pointer-events:none;">
           <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pt-blink 1.4s infinite;"></span><span id="simLabel">e-e.network.live</span>
@@ -153,7 +155,7 @@ a{color:inherit}
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);">( 01 ) About</div>
         <img src="images/panos_tsilivis.jpg" alt="Panos Tsilivis" width="150" height="150" loading="lazy" style="margin-top:22px;width:clamp(120px,15vw,168px);height:clamp(120px,15vw,168px);border-radius:50%;object-fit:cover;object-position:50% 22%;border:1px solid var(--line);box-shadow:0 14px 34px -16px rgba(0,0,0,.45);animation:pt-float 6s ease-in-out infinite;">
       </div>
-      <div data-reveal data-reveal-delay="80" style="flex:1 1 420px;min-width:280px;">
+      <div data-reveal data-reveal-delay="80" style="flex:1 1 420px;min-width:min(280px,100%);">
         <p style="font-size:clamp(24px,3.4vw,38px);line-height:1.32;font-weight:500;letter-spacing:-.02em;margin:0 0 28px;">A software technical leader who turns complex, demanding projects into shipped, well-engineered code — and brings the team along for the ride.</p>
         <p style="font-size:17px;line-height:1.7;color:var(--muted);margin:0 0 18px;">Software Technical Project Lead for BCM &amp; Signal Gateway ECUs on Classic AUTOSAR. I lead cross-functional C++ teams across embedded, CI/CD and quality domains — setting engineering standards and steering ASPICE-compliant delivery end to end, hands-on where it counts.</p>
         <p style="font-size:17px;line-height:1.7;color:var(--muted);margin:0;">Before that: ADAS/AD development engineer, building motion planning and control in C++, Python, MATLAB &amp; Simulink and ROS. Native Greek, fluent English, based in Regensburg, Germany.</p>
@@ -175,7 +177,7 @@ a{color:inherit}
       </div>
 
       <div style="display:flex;gap:clamp(28px,4.5vw,56px);flex-wrap:wrap;align-items:flex-start;">
-        <div data-reveal style="flex:1 1 360px;min-width:300px;position:sticky;top:92px;">
+        <div data-reveal class="exp-sticky" style="flex:1 1 360px;min-width:min(300px,100%);">
           <div style="position:relative;height:clamp(340px,44vw,440px);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg);box-shadow:0 24px 60px -34px rgba(0,0,0,.4);">
             <canvas id="hwyCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
             <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;pointer-events:none;"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pt-blink 1.4s infinite;"></span>quintic_planner.live</div>
@@ -188,7 +190,7 @@ a{color:inherit}
           <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.65;color:var(--muted);letter-spacing:.03em;margin:16px 2px 0;">Quintic-polynomial lane change &mdash; a jerk-minimal, collision-free trajectory steering the ego vehicle around a stopped obstacle on a curving two-way road. The other half of my world.</p>
         </div>
 
-        <div style="flex:1 1 440px;min-width:300px;">
+        <div style="flex:1 1 440px;min-width:min(300px,100%);">
           <div data-reveal style="position:relative;border-left:2px solid var(--line);padding-left:28px;margin-bottom:30px;">
             <span style="position:absolute;left:-9px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--bg-2);"></span>
             <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent-ink);background:var(--accent);padding:3px 9px;border-radius:6px;letter-spacing:.06em;">PRESENT</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Jan 2024 · Regensburg, DE</span></div>
@@ -493,6 +495,14 @@ a{color:inherit}
     panel.addEventListener('mousemove',onMove);
     panel.addEventListener('mouseleave',onLeave);
     panel.addEventListener('click',onClick);
+    // pause the sim while offscreen (battery/perf on mobile)
+    var vis=true;
+    var vio=new IntersectionObserver(function(ents){
+      var v=ents[0].isIntersecting;
+      if(v && !vis){ vis=true; last=performance.now(); raf=requestAnimationFrame(frame); }
+      else if(!v){ vis=false; cancelAnimationFrame(raf); }
+    },{threshold:0});
+    vio.observe(panel);
 
     var cs=getComputedStyle(document.documentElement);
     var colors=readColors(cs); var colTick=0;
@@ -629,7 +639,7 @@ a{color:inherit}
       for(var y=(H/2)%gs;y<H;y+=gs){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
       ctx.globalAlpha=1;
       if(mode==='autosar') drawAutosar(c); else drawNet(c);
-      raf=requestAnimationFrame(frame);
+      if(vis) raf=requestAnimationFrame(frame);
     }
     frame(performance.now());
   };
@@ -646,6 +656,15 @@ a{color:inherit}
     var onMove=function(e){ var el=$('hwyCanvas'); if(!el) return; var r=el.getBoundingClientRect(); mouse.x=(e.clientX-r.left)/Math.max(1,r.width); };
     var onLeave=function(){ mouse.x=null; };
     panel.addEventListener('mousemove',onMove); panel.addEventListener('mouseleave',onLeave);
+    panel.addEventListener('touchmove',function(e){ var t=e.touches[0]; if(t) onMove(t); },{passive:true});
+    // pause while offscreen (battery/perf on mobile)
+    var vis=true;
+    var vio=new IntersectionObserver(function(ents){
+      var v=ents[0].isIntersecting;
+      if(v && !vis){ vis=true; last=performance.now(); raf2=requestAnimationFrame(frame); }
+      else if(!v){ vis=false; cancelAnimationFrame(raf2); }
+    },{threshold:0});
+    vio.observe(panel);
     var cs=getComputedStyle(document.documentElement); var colors=readColors(cs); var ct=0;
     var S=function(t){ return t<=0?0:t>=1?1:t*t*t*(t*(t*6-15)+10); };
     var rr=function(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
@@ -698,7 +717,7 @@ a{color:inherit}
       var off=sh(xe);
       var latEl=$('hwyLat'); if(latEl) latEl.textContent=(-off*3.7).toFixed(1);
       var stEl=$('hwyState'); if(stEl) stEl.textContent=Math.abs(off)<0.04?'lane keep':(xe<obsX?'avoiding':'returning');
-      raf2=requestAnimationFrame(frame);
+      if(vis) raf2=requestAnimationFrame(frame);
     }
     frame(performance.now());
   };
